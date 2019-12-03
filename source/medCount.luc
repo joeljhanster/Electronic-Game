@@ -1,0 +1,33 @@
+module medCount (
+    input clk,  // clock
+    input rst,  // reset  
+    input resetCount,
+    output value[25],
+    output light[16]
+  ) {
+  
+  .clk(clk), .rst(rst) {
+    dff flip[25];
+    dff count[6];
+  }
+  randomSequence randSeq;
+
+  always {
+    randSeq.value = count.q;
+    flip.d = flip.q + 1;
+    value = flip.q;
+    
+    case (count.q[0]) {
+      b0: light = randSeq.sequence;    // TODO: SET LIGHT TO RANDOM SEQUENCE
+      b1: light = 16b0;
+      default: light = 16b0;
+    }
+    
+    if (resetCount) {
+      flip.d = 0;
+    }
+    else if (flip.q == 25b1111111111111111111111111) {
+      count.d = count.q + 1;
+    }
+  }
+}

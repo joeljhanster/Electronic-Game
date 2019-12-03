@@ -1,0 +1,38 @@
+module delayCount (
+    input clk,  // clock
+    input rst,  // reset
+    input resetCount,
+    output value[3],
+    output light[16]
+  ) {
+  
+  .clk(clk) {
+    .rst(rst) {
+    dff flip[25];
+    dff count[3];
+    }
+  } 
+
+  always {
+    flip.d = flip.q + 1;
+    value = count.q;
+    
+    case (count.q) {
+      b000: light = 16b0;
+      b001: light = 16b1111111111111111;
+      b010: light = 16b0;
+      b011: light = 16b0110111111110110;
+      b100: light = 16b0;
+      b101: light = 16b0000011001100000;
+      default: light = 16b0;
+    }
+    
+    if (resetCount) {
+      flip.d = 0;
+      count.d = 0;
+    }
+    else if (flip.q == 25b1111111111111111111111111) {
+      count.d = count.q + 1;
+    }
+  }
+}

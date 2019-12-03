@@ -1,0 +1,24 @@
+// This file is modified to allow the 7-segment LED panel to display 0 or 1
+
+module seven_seg (
+    input char[4],
+    output segs[7]
+  ) {
+
+  always {
+    case (char) {
+      // Segment is ON when "1" and OFF when "0"
+      b0000: segs = 7b0111111;    // displays 0
+      b0001: segs = 7b0000110;    // displays 1
+      b0010: segs = 7b1011011;    // displays 2
+      b0011: segs = 7b1001111;    // displays 3
+      b0100: segs = 7b1100110;    // displays 4
+      b0101: segs = 7b1101101;    // displays 5
+      b0110: segs = 7b1111101;    // displays 6
+      b0111: segs = 7b0000111;    // displays 7
+      b1000: segs = 7b1111111;    // displays 8
+      b1001: segs = 7b1101111;    // displays 9
+      default: segs = 7b0000000;  // no display
+    }
+  }
+}

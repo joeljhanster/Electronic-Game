@@ -1,0 +1,143 @@
+// REGISTER FILE MODULE: This file stores all data into 32 registers.
+
+module regFile (
+    input clk,             // clock
+    input rst,
+    input ra_addr[5],      // register 'A' address: maximum 32 registers, 5 bits
+    input rb_addr[5],      // register 'B' address: maximum 32 registers, 5 bits
+    input write,           // write signal: write = 1; read = 0
+    input default_values,  // default values signal: clear all register files, except register 15 (hiscore) and register 17 (default 3 points)
+    input wa_data[16],     // write data into register 'A'
+    output ra_data[16],    // output register 'A' data
+    output rb_data[16],    // output register 'B' data
+    output hiscore[16],    // output 16-bit hiscore (only require 10 LSBs -- max hiscore at 999)
+    output score[16]       // output 16-bit score (only require 10 LSBs -- max score at 999)
+  ) {
+  
+  .clk(clk), .rst(rst) {
+    dff r1_data[16];       // saved data for register 1
+    dff r2_data[16];       // saved data for register 2
+    dff r3_data[16];       // saved data for register 3
+    dff r4_data[16];       // saved data for register 4
+    dff r5_data[16];       // saved data for register 5
+    dff r6_data[16];       // saved data for register 6
+    dff r7_data[16];       // saved data for register 7
+    dff r8_data[16];       // saved data for register 8
+    dff r9_data[16];       // saved data for register 9
+    dff r10_data[16];      // saved data for register 10
+    dff r11_data[16];      // saved data for register 11
+    dff r12_data[16];      // saved data for register 12
+    dff r13_data[16];      // saved data for register 13
+    dff r14_data[16];      // saved data for register 14
+    dff r15_data[16];      // saved data for register 15
+    dff r16_data[16];      // saved data for register 16
+    dff r17_data[16];      // saved data for register 17
+    dff r18_data[16];      // saved data for register 18
+    dff r19_data[16];      // saved data for register 19
+  }
+
+  always {
+    // WHEN GAME RESTARTS, ONLY HISCORE (REGISTER 15) AND DEFAULT 3 POINTS (REGISTER 17) REMAINS SAME
+    // DATA IN REMAINING REGISTER FILES DEFAULT TO ZERO
+    if (default_values) {
+      r1_data.d = 16b0;         // S0 sequence
+      r2_data.d = 16b0;         // S1 sequence
+      r3_data.d = 16b0;         // S2 sequence
+      r4_data.d = 16b0;         // S3 sequence 
+      r5_data.d = 16b0;         // S4 sequence
+      r6_data.d = 16b0;         // S5 sequence
+      r7_data.d = 16b0;         // S6 sequence
+      r8_data.d = 16b0;         // S7 sequence
+      r9_data.d = 16b0;         // S8 sequence
+      r10_data.d = 16b0;        // S9 sequence
+      r11_data.d = 16b0;        // S10 sequence
+      r12_data.d = 16b0;        // S11 sequence
+      r13_data.d = 16b0;        // S12 sequence
+      r14_data.d = 16b0;        // user's input sequence
+      r15_data.d = r15_data.q;  // hiscore
+      r16_data.d = 16b0;        // score
+      r17_data.d = r17_data.q;  // default 3 points
+      r18_data.d = 16b0;        // speed multiplier
+      r19_data.d = 16b0;        // points to add after each successful press
+    }
+    
+    // WRITE SIGNAL CHANGES REGISTER DATA VALUE BASED ON REGISTER ADDRESS
+    if (write) {
+      case (ra_addr) {
+        b00001: r1_data.d = wa_data;   // S0 sequence
+        b00010: r2_data.d = wa_data;   // S1 sequence
+        b00011: r3_data.d = wa_data;   // S2 sequence
+        b00100: r4_data.d = wa_data;   // S3 sequence 
+        b00101: r5_data.d = wa_data;   // S4 sequence
+        b00110: r6_data.d = wa_data;   // S5 sequence
+        b00111: r7_data.d = wa_data;   // S6 sequence
+        b01000: r8_data.d = wa_data;   // S7 sequence
+        b01001: r9_data.d = wa_data;   // S8 sequence
+        b01010: r10_data.d = wa_data;  // S9 sequence
+        b01011: r11_data.d = wa_data;  // S10 sequence
+        b01100: r12_data.d = wa_data;  // S11 sequence
+        b01101: r13_data.d = wa_data;  // S12 sequence
+        b01110: r14_data.d = wa_data;  // user's input sequence
+        b01111: r15_data.d = wa_data;  // hiscore
+        b10000: r16_data.d = wa_data;  // score
+        b10001: r17_data.d = wa_data;  // default 3 points
+        b10010: r18_data.d = wa_data;  // speed multiplier
+        b10011: r19_data.d = wa_data;  // points to add after each successful press
+      }
+    }
+   
+   // OUTPUT REGISTER 'A' DATA BASED ON REGISTER 'A' ADDRESS
+   case (ra_addr) {
+        b00001: ra_data = r1_data.q;
+        b00010: ra_data = r2_data.q;
+        b00011: ra_data = r3_data.q;
+        b00100: ra_data = r4_data.q;
+        b00101: ra_data = r5_data.q;
+        b00110: ra_data = r6_data.q;
+        b00111: ra_data = r7_data.q;
+        b01000: ra_data = r8_data.q;
+        b01001: ra_data = r9_data.q;
+        b01010: ra_data = r10_data.q;
+        b01011: ra_data = r11_data.q;
+        b01100: ra_data = r12_data.q;
+        b01101: ra_data = r13_data.q;
+        b01110: ra_data = r14_data.q;
+        b01111: ra_data = r15_data.q;
+        b10000: ra_data = r16_data.q;
+        b10001: ra_data = r17_data.q;
+        b10010: ra_data = r18_data.q;
+        b10011: ra_data = r19_data.q;
+        b11111: ra_data = 16b0;
+        default: ra_data = 16b0;
+      }
+      
+   // OUTPUT REGISTER 'B' DATA BASED ON REGISTER 'B' ADDRESS
+   case (rb_addr) {
+        b00001: rb_data = r1_data.q;
+        b00010: rb_data = r2_data.q;
+        b00011: rb_data = r3_data.q;
+        b00100: rb_data = r4_data.q;
+        b00101: rb_data = r5_data.q;
+        b00110: rb_data = r6_data.q;
+        b00111: rb_data = r7_data.q;
+        b01000: rb_data = r8_data.q;
+        b01001: rb_data = r9_data.q;
+        b01010: rb_data = r10_data.q;
+        b01011: rb_data = r11_data.q;
+        b01100: rb_data = r12_data.q;
+        b01101: rb_data = r13_data.q;
+        b01110: rb_data = r14_data.q;
+        b01111: rb_data = r15_data.q;
+        b10000: rb_data = r16_data.q;
+        b10001: rb_data = r17_data.q;
+        b10010: rb_data = r18_data.q;
+        b10011: rb_data = r19_data.q;
+        b11111: rb_data = 16b0;
+        default: rb_data = 16b0;
+      }
+    
+    // OUTPUT HISCORE & SCORE DATA (ONLY 10 LSBs REQUIRED)
+    hiscore = r15_data.q;
+    score = r16_data.q;
+  }
+}

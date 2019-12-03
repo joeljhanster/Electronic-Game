@@ -1,0 +1,86 @@
+// COMPUTER PROCESSOR UNIT MODULE: This file connects FSM Logic Module, Register File Module and ALU Module to form the CPU
+
+module mojo_top (
+    input clk,              // 50MHz clock
+    input rst_n,            // reset button (active low)
+    output led [8],         // 8 user controllable LEDs
+    input cclk,             // configuration clock, AVR ready when high
+    output spi_miso,        // AVR SPI MISO
+    input spi_ss,           // AVR SPI Slave Select
+    input spi_mosi,         // AVR SPI MOSI
+    input spi_sck,          // AVR SPI Clock
+    output spi_channel [4], // AVR general purpose pins (used by default to select ADC channel)
+    input avr_tx,           // AVR TX (FPGA RX)
+    output avr_rx,          // AVR RX (FPGA TX)
+    input avr_rx_busy,      // AVR RX buffer full
+
+    input start_button,     // start button to play game               ---------------
+    input switch[16],       // 16-bit press switches for user's input  | 1  2  3  4  |
+    output light[16],       // 16-bit light tagged to press switches   | 5  6  7  8  |
+    output segment[7],      // seven segment output                    | 9  10 11 12 |
+    output hiscore_sel[3],  // select digit for hiscore output         | 13 14 15 16 |
+    output score_sel[3]     // select digit for score output           ---------------
+  ) {
+  
+  sig rst;                  // reset signal
+  
+  .clk(clk) {
+    // The reset conditioner is used to synchronize the reset signal to the FPGA
+    // clock. This ensures the entire FPGA comes out of reset at the same time.
+    reset_conditioner reset_cond;
+    
+    .rst(rst) {
+      logic fsm_logic;      // FSM Control Logic Unit Module
+      regFile regFile;      // Register File Module
+      binary_to_bcd bc;     // Binary to Binary-Coded Decimal (BCD) Module (for converting 16-bit scores to seven segment display)
+    }
+  }
+  alu alu;                  // ALU Module
+  
+  always {
+    reset_cond.in = ~rst_n; // input raw inverted reset signal
+    rst = reset_cond.out;   // conditioned reset
+    
+    led = fsm_logic.led;    // turn LEDs off
+    spi_miso = bz;          // not using SPI
+    spi_channel = bzzzz;    // not using flags
+    avr_rx = bz;            // not using serial port
+    
+    // FSM LOGIC UNIT INPUTS
+    fsm_logic.start_button = start_button;              // start button to play game
+    fsm_logic.push_button = switch;                     // 16-bits press switch for user's input
+    fsm_logic.alu = alu.alu;                            // alu output used during CMPEQ, ADD, MUL, "A"
+    
+    // REGISTER FILE INPUTS
+    regFile.default_values = fsm_logic.default_values;  // default values signal to clear data in register files
+    regFile.write = fsm_logic.write;                    // write signal: write = 1; read = 0
+    regFile.ra_addr = fsm_logic.ra_addr;                // register A address
+    regFile.wa_data = fsm_logic.wa_data;                // write data into register A
+    regFile.rb_addr = fsm_logic.rb_addr;                // register B address
+    
+    // ALU INPUTS
+    alu.a = regFile.ra_data;                            // 16-bit input A
+    alu.b = regFile.rb_data;                            // 16-bit input B
+    alu.alufn = fsm_logic.alufn;                        // 6-bit alufn signal to select alu function
+    
+    // DISPLAY LIGHT OUTPUT
+    light = fsm_logic.light;                            // 16-bit light output
+    
+    // DISPLAY SEVEN SEGMENT OUTPUT
+    bc.hiscore = regFile.hiscore[9:0];                  // 10-bit hiscore (max 999 points)
+    bc.score = regFile.score[9:0];                      // 10-bit score (max 999 points)
+    segment = bc.score_seg;                             // select seven segment
+    hiscore_sel = bc.hiscore_sel;                       // select hiscore digit
+    score_sel = bc.score_sel;                           // select score digit
+    
+    /*
+    // FOR TESTING PURPOSES (WITHOUT AVAILABLE LIGHT)
+    if (fsm_logic.light[7:0] != 0) {
+      led = fsm_logic.light[7:0];
+    }
+    else {
+      led = fsm_logic.light[15:8];
+    }
+    */
+  }
+}

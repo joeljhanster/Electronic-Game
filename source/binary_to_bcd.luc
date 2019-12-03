@@ -1,0 +1,104 @@
+// BINARY TO BINARY-CODED DECIMAL MODULE: This file converts 2 x 10-bits scores into output for 2 x 3-digit seven segment display.
+// This module implements the Double Dabble Algorithm, adapted from https://en.wikipedia.org/wiki/Double_dabble.
+
+module binary_to_bcd (
+    input clk,                // clock
+    input rst,                // reset
+    input hiscore[10],        // 10-bit input hiscore from regFile Module (max 999 points)
+    input score[10],          // 10-bit input score from regFile Module (max 999 points)
+    output score_seg[7],      // seven segment output for hiscore/score display
+    output hiscore_sel[3],    // select digit for hiscore display
+    output score_sel[3]       // select digit for score display
+  ) {
+  .clk(clk), .rst(rst) {
+    dff originalhiscore[10];  // stores latest 10-bit binary value of hiscore
+    dff originalscore[10];    // stores latest 10-bit binary value of score
+    dff binaryscore[44];      // USING DOUBLE DABBLE ALGORITHM: 44-bits binary score split into 2 x 22-bits
+    dff hiscore_count[4];     // 1st 4-bits: hundreds; 2nd 4-bits: tens; 3rd 4-bits: ones; remaining 10-bits: score in binary
+    dff score_count[4];       // given 10-bits, iterate shift-left 10 times --> 4-bits       E.g. 4b1010(=10):
+    dff hiscore_ones;         // add 3 when ones more than 5 (once only per iteration)       0000 0000 1010   i=0 (shift left)
+    dff hiscore_tens;         // add 3 when tens more than 5 (once only per iteration)       0000 0001 0100   i=1 (shift left)
+    dff hiscore_hundreds;     // add 3 when hundreds more than 5 (once only per iteration)   0000 0010 1000   i=2 (shift left)
+    dff score_ones;           // add 3 when ones more than 5 (once only per iteration)       0000 0101 0000   i=3 (ones >= 5, add 3)
+    dff score_tens;           // add 3 when tens more than 5 (once only per iteration)       0000 1000 0000   i=3 (shift left)
+    dff score_hundreds;       // add 3 when hundreds more than 5 (once only per iteration)   0001 0000 0000   i=4 (stop at n iterations)
+    multi_seven_seg mss;      // multi seven segment module to display 2 x 3-digit              1    0
+  }
+
+  always {
+    // DOUBLE DABBLE ALGORITHM - BINARY TO BINARY CODED DECIMAL (BCD) FOR HISCORE
+    if (hiscore_count.q != 10) {                                    // stop at 10 iterations
+      // ONES
+      if (binaryscore.q[13:10] >= 5 && !hiscore_ones.q) {           // add 3 if ones more than 5 (once only per iteration)
+        binaryscore.d[13:10] = binaryscore.q[13:10] + 3;
+        hiscore_ones.d = 1;
+      }
+      // TENS 
+      else if (binaryscore.q[17:14] >= 5 && !hiscore_tens.q) {      // add 3 if tens more than 5 (once only per iteration)
+        binaryscore.d[17:14] = binaryscore.q[17:14] + 3;
+        hiscore_tens.d = 1;
+      }
+      // HUNDREDS
+      else if (binaryscore.q[21:18] >= 5 && !hiscore_hundreds.q) {  // add 3 if hundreds more than 5 (once only per iteration)
+        binaryscore.d[21:18] = binaryscore.q[21:18] + 3;
+        hiscore_hundreds.d = 1;
+      }
+      // SHIFT LEFT (for n iterations, where n = length of binary number)
+      else {
+        binaryscore.d[21:0] = binaryscore.q[21:0] << 1;
+        hiscore_count.d = hiscore_count.q + 1;                      // add 1 to iteration count after each shift left
+        hiscore_ones.d = 0;
+        hiscore_tens.d = 0;
+        hiscore_hundreds.d = 0;
+      }
+    }
+    
+    // DOUBLE DABBLE ALGORITHM - BINARY TO BINARY CODED DECIMAL (BCD) FOR SCORE
+    if (score_count.q != 10) {                                      // stop at 10 iterations
+      // ONES
+      if (binaryscore.q[35:32] >= 5 && !score_ones.q) {             // add 3 if ones more than 5 (once only per iteration)
+        binaryscore.d[35:32] = binaryscore.q[35:32] + 3;
+        score_ones.d = 1;
+      }
+      // TENS 
+      else if (binaryscore.q[39:36] >= 5 && !score_tens.q) {        // add 3 if tens more than 5 (once only per iteration)
+        binaryscore.d[39:36] = binaryscore.q[39:36] + 3;
+        score_tens.d = 1;
+      }
+      // HUNDREDS
+      else if (binaryscore.q[43:40] >= 5 && !score_hundreds.q) {    // add 3 if tens more than 5 (once only per iteration)
+        binaryscore.d[43:40] = binaryscore.q[43:40] + 3;
+        score_hundreds.d = 1;
+      }
+      // SHIFT LEFT (for n iterations, where n = length of binary number)
+      else {
+        binaryscore.d[43:22] = binaryscore.q[43:22] << 1;
+        score_count.d = score_count.q + 1;                          // add 1 to iteration count after each shift left
+        score_ones.d = 0;
+        score_tens.d = 0;
+        score_hundreds.d = 0;
+      }
+    }
+    
+    // EVERYTIME SCORE IS UPDATED, RESET BINARYNUMBER TO COMMENCE ALGORITHM
+    if (originalhiscore.q != hiscore) {
+      originalhiscore.d = hiscore;
+      binaryscore.d[21:10] = 12b0;
+      binaryscore.d[9:0] = hiscore;
+      hiscore_count.d = 0;
+    }
+    
+    if (originalscore.q != score) {
+      originalscore.d = score;
+      binaryscore.d[43:32] = 12b0;
+      binaryscore.d[31:22] = score;
+      score_count.d = 0;
+    }
+
+    // INPUT 6 X 4-BIT VALUES TO BE DISPLAYED ON 2 X 3-DIGIT SEVEN SEGMENT DISPLAYS
+    mss.values = {binaryscore.q[43:40], binaryscore.q[39:36], binaryscore.q[35:32], binaryscore.q[21:18], binaryscore.q[17:14], binaryscore.q[13:10]};
+    score_seg = mss.seg;
+    hiscore_sel = ~mss.sel[2:0];
+    score_sel = ~mss.sel[5:3];
+  }
+}

@@ -1,0 +1,1276 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> Reading design: mojo_top_0.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "mojo_top_0.prj"
+
+---- Target Parameters
+Target Device                      : xc6slx9tqg144-2
+Output File Name                   : "mojo_top_0.ngc"
+
+---- Source Options
+Top Module Name                    : mojo_top_0
+
+---- General Options
+Optimization Goal                  : speed
+Optimization Effort                : 1
+Netlist Hierarchy                  : rebuilt
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "C:/Users/jieha/OneDrive/Documents/mojo/Electronic Game CAA 231119/work/planAhead/Electronic Game CAA 231119/Electronic Game CAA 231119.srcs/sources_1/imports/verilog/seven_seg_24.v" into library work
+Parsing module <seven_seg_24>.
+Analyzing Verilog file "C:/Users/jieha/OneDrive/Documents/mojo/Electronic Game CAA 231119/work/planAhead/Electronic Game CAA 231119/Electronic Game CAA 231119.srcs/sources_1/imports/verilog/randomSequence_18.v" into library work
+Parsing module <randomSequence_18>.
+Analyzing Verilog file "C:/Users/jieha/OneDrive/Documents/mojo/Electronic Game CAA 231119/work/planAhead/Electronic Game CAA 231119/Electronic Game CAA 231119.srcs/sources_1/imports/verilog/decoder_25.v" into library work
+Parsing module <decoder_25>.
+Analyzing Verilog file "C:/Users/jieha/OneDrive/Documents/mojo/Electronic Game CAA 231119/work/planAhead/Electronic Game CAA 231119/Electronic Game CAA 231119.srcs/sources_1/imports/verilog/counter_23.v" into library work
+Parsing module <counter_23>.
+Analyzing Verilog file "C:/Users/jieha/OneDrive/Documents/mojo/Electronic Game CAA 231119/work/planAhead/Electronic Game CAA 231119/Electronic Game CAA 231119.srcs/sources_1/imports/verilog/shifter_17.v" into library work
+Parsing module <shifter_17>.
+Analyzing Verilog file "C:/Users/jieha/OneDrive/Documents/mojo/Electronic Game CAA 231119/work/planAhead/Electronic Game CAA 231119/Electronic Game CAA 231119.srcs/sources_1/imports/verilog/score_12.v" into library work
+Parsing module <score_12>.
+Analyzing Verilog file "C:/Users/jieha/OneDrive/Documents/mojo/Electronic Game CAA 231119/work/planAhead/Electronic Game CAA 231119/Electronic Game CAA 231119.srcs/sources_1/imports/verilog/multi_seven_seg_13.v" into library work
+Parsing module <multi_seven_seg_13>.
+Analyzing Verilog file "C:/Users/jieha/OneDrive/Documents/mojo/Electronic Game CAA 231119/work/planAhead/Electronic Game CAA 231119/Electronic Game CAA 231119.srcs/sources_1/imports/verilog/medCount_8.v" into library work
+Parsing module <medCount_8>.
+Analyzing Verilog file "C:/Users/jieha/OneDrive/Documents/mojo/Electronic Game CAA 231119/work/planAhead/Electronic Game CAA 231119/Electronic Game CAA 231119.srcs/sources_1/imports/verilog/hardCount_9.v" into library work
+Parsing module <hardCount_9>.
+Analyzing Verilog file "C:/Users/jieha/OneDrive/Documents/mojo/Electronic Game CAA 231119/work/planAhead/Electronic Game CAA 231119/Electronic Game CAA 231119.srcs/sources_1/imports/verilog/extremeCount_10.v" into library work
+Parsing module <extremeCount_10>.
+Analyzing Verilog file "C:/Users/jieha/OneDrive/Documents/mojo/Electronic Game CAA 231119/work/planAhead/Electronic Game CAA 231119/Electronic Game CAA 231119.srcs/sources_1/imports/verilog/easyCount_7.v" into library work
+Parsing module <easyCount_7>.
+Analyzing Verilog file "C:/Users/jieha/OneDrive/Documents/mojo/Electronic Game CAA 231119/work/planAhead/Electronic Game CAA 231119/Electronic Game CAA 231119.srcs/sources_1/imports/verilog/delayCount_6.v" into library work
+Parsing module <delayCount_6>.
+Analyzing Verilog file "C:/Users/jieha/OneDrive/Documents/mojo/Electronic Game CAA 231119/work/planAhead/Electronic Game CAA 231119/Electronic Game CAA 231119.srcs/sources_1/imports/verilog/compare_15.v" into library work
+Parsing module <compare_15>.
+Analyzing Verilog file "C:/Users/jieha/OneDrive/Documents/mojo/Electronic Game CAA 231119/work/planAhead/Electronic Game CAA 231119/Electronic Game CAA 231119.srcs/sources_1/imports/verilog/bossCount_11.v" into library work
+Parsing module <bossCount_11>.
+Analyzing Verilog file "C:/Users/jieha/OneDrive/Documents/mojo/Electronic Game CAA 231119/work/planAhead/Electronic Game CAA 231119/Electronic Game CAA 231119.srcs/sources_1/imports/verilog/boolean_16.v" into library work
+Parsing module <boolean_16>.
+Analyzing Verilog file "C:/Users/jieha/OneDrive/Documents/mojo/Electronic Game CAA 231119/work/planAhead/Electronic Game CAA 231119/Electronic Game CAA 231119.srcs/sources_1/imports/verilog/adder_14.v" into library work
+Parsing module <adder_14>.
+Analyzing Verilog file "C:/Users/jieha/OneDrive/Documents/mojo/Electronic Game CAA 231119/work/planAhead/Electronic Game CAA 231119/Electronic Game CAA 231119.srcs/sources_1/imports/verilog/reset_conditioner_1.v" into library work
+Parsing module <reset_conditioner_1>.
+Analyzing Verilog file "C:/Users/jieha/OneDrive/Documents/mojo/Electronic Game CAA 231119/work/planAhead/Electronic Game CAA 231119/Electronic Game CAA 231119.srcs/sources_1/imports/verilog/regFile_3.v" into library work
+Parsing module <regFile_3>.
+Analyzing Verilog file "C:/Users/jieha/OneDrive/Documents/mojo/Electronic Game CAA 231119/work/planAhead/Electronic Game CAA 231119/Electronic Game CAA 231119.srcs/sources_1/imports/verilog/logic_2.v" into library work
+Parsing module <logic_2>.
+Analyzing Verilog file "C:/Users/jieha/OneDrive/Documents/mojo/Electronic Game CAA 231119/work/planAhead/Electronic Game CAA 231119/Electronic Game CAA 231119.srcs/sources_1/imports/verilog/binary_to_bcd_4.v" into library work
+Parsing module <binary_to_bcd_4>.
+Analyzing Verilog file "C:/Users/jieha/OneDrive/Documents/mojo/Electronic Game CAA 231119/work/planAhead/Electronic Game CAA 231119/Electronic Game CAA 231119.srcs/sources_1/imports/verilog/alu_5.v" into library work
+Parsing module <alu_5>.
+Analyzing Verilog file "C:/Users/jieha/OneDrive/Documents/mojo/Electronic Game CAA 231119/work/planAhead/Electronic Game CAA 231119/Electronic Game CAA 231119.srcs/sources_1/imports/verilog/mojo_top_0.v" into library work
+Parsing module <mojo_top_0>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <mojo_top_0>.
+
+Elaborating module <reset_conditioner_1>.
+
+Elaborating module <logic_2>.
+
+Elaborating module <delayCount_6>.
+
+Elaborating module <easyCount_7>.
+
+Elaborating module <randomSequence_18>.
+
+Elaborating module <medCount_8>.
+
+Elaborating module <hardCount_9>.
+
+Elaborating module <extremeCount_10>.
+
+Elaborating module <bossCount_11>.
+
+Elaborating module <score_12>.
+WARNING:HDLCompiler:1127 - "C:/Users/jieha/OneDrive/Documents/mojo/Electronic Game CAA 231119/work/planAhead/Electronic Game CAA 231119/Electronic Game CAA 231119.srcs/sources_1/imports/verilog/logic_2.v" Line 119: Assignment to M_scoreModule_alufn ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:/Users/jieha/OneDrive/Documents/mojo/Electronic Game CAA 231119/work/planAhead/Electronic Game CAA 231119/Electronic Game CAA 231119.srcs/sources_1/imports/verilog/logic_2.v" Line 120: Assignment to M_scoreModule_ra_addr ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:/Users/jieha/OneDrive/Documents/mojo/Electronic Game CAA 231119/work/planAhead/Electronic Game CAA 231119/Electronic Game CAA 231119.srcs/sources_1/imports/verilog/logic_2.v" Line 121: Assignment to M_scoreModule_rb_addr ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:/Users/jieha/OneDrive/Documents/mojo/Electronic Game CAA 231119/work/planAhead/Electronic Game CAA 231119/Electronic Game CAA 231119.srcs/sources_1/imports/verilog/logic_2.v" Line 122: Assignment to M_scoreModule_wa_data ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:/Users/jieha/OneDrive/Documents/mojo/Electronic Game CAA 231119/work/planAhead/Electronic Game CAA 231119/Electronic Game CAA 231119.srcs/sources_1/imports/verilog/logic_2.v" Line 123: Assignment to M_scoreModule_write ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:/Users/jieha/OneDrive/Documents/mojo/Electronic Game CAA 231119/work/planAhead/Electronic Game CAA 231119/Electronic Game CAA 231119.srcs/sources_1/imports/verilog/logic_2.v" Line 124: Assignment to M_scoreModule_next ignored, since the identifier is never used
+
+Elaborating module <regFile_3>.
+
+Elaborating module <binary_to_bcd_4>.
+
+Elaborating module <multi_seven_seg_13>.
+
+Elaborating module <counter_23>.
+
+Elaborating module <seven_seg_24>.
+
+Elaborating module <decoder_25>.
+WARNING:HDLCompiler:413 - "C:/Users/jieha/OneDrive/Documents/mojo/Electronic Game CAA 231119/work/planAhead/Electronic Game CAA 231119/Electronic Game CAA 231119.srcs/sources_1/imports/verilog/multi_seven_seg_13.v" Line 51: Result of 8-bit expression is truncated to fit in 6-bit target.
+
+Elaborating module <alu_5>.
+
+Elaborating module <adder_14>.
+
+Elaborating module <compare_15>.
+
+Elaborating module <boolean_16>.
+
+Elaborating module <shifter_17>.
+WARNING:HDLCompiler:1127 - "C:/Users/jieha/OneDrive/Documents/mojo/Electronic Game CAA 231119/work/planAhead/Electronic Game CAA 231119/Electronic Game CAA 231119.srcs/sources_1/imports/verilog/mojo_top_0.v" Line 114: Assignment to M_alu_z ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:/Users/jieha/OneDrive/Documents/mojo/Electronic Game CAA 231119/work/planAhead/Electronic Game CAA 231119/Electronic Game CAA 231119.srcs/sources_1/imports/verilog/mojo_top_0.v" Line 115: Assignment to M_alu_v ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:/Users/jieha/OneDrive/Documents/mojo/Electronic Game CAA 231119/work/planAhead/Electronic Game CAA 231119/Electronic Game CAA 231119.srcs/sources_1/imports/verilog/mojo_top_0.v" Line 116: Assignment to M_alu_n ignored, since the identifier is never used
+WARNING:Xst:2972 - "C:/Users/jieha/OneDrive/Documents/mojo/Electronic Game CAA 231119/work/planAhead/Electronic Game CAA 231119/Electronic Game CAA 231119.srcs/sources_1/imports/verilog/logic_2.v" line 115. All outputs of instance <scoreModule> of block <score_12> are unconnected in block <logic_2>. Underlying logic will be removed.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <mojo_top_0>.
+    Related source file is "C:/Users/jieha/OneDrive/Documents/mojo/Electronic Game CAA 231119/work/planAhead/Electronic Game CAA 231119/Electronic Game CAA 231119.srcs/sources_1/imports/verilog/mojo_top_0.v".
+WARNING:Xst:647 - Input <cclk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <spi_ss> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <spi_mosi> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <spi_sck> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <avr_tx> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <avr_rx_busy> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+INFO:Xst:3210 - "C:/Users/jieha/OneDrive/Documents/mojo/Electronic Game CAA 231119/work/planAhead/Electronic Game CAA 231119/Electronic Game CAA 231119.srcs/sources_1/imports/verilog/mojo_top_0.v" line 109: Output port <z> of the instance <alu> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:/Users/jieha/OneDrive/Documents/mojo/Electronic Game CAA 231119/work/planAhead/Electronic Game CAA 231119/Electronic Game CAA 231119.srcs/sources_1/imports/verilog/mojo_top_0.v" line 109: Output port <v> of the instance <alu> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:/Users/jieha/OneDrive/Documents/mojo/Electronic Game CAA 231119/work/planAhead/Electronic Game CAA 231119/Electronic Game CAA 231119.srcs/sources_1/imports/verilog/mojo_top_0.v" line 109: Output port <n> of the instance <alu> is unconnected or connected to loadless signal.
+    Found 1-bit tristate buffer for signal <spi_miso> created at line 119
+    Found 1-bit tristate buffer for signal <spi_channel<3>> created at line 119
+    Found 1-bit tristate buffer for signal <spi_channel<2>> created at line 119
+    Found 1-bit tristate buffer for signal <spi_channel<1>> created at line 119
+    Found 1-bit tristate buffer for signal <spi_channel<0>> created at line 119
+    Found 1-bit tristate buffer for signal <avr_rx> created at line 119
+    Summary:
+	inferred   6 Tristate(s).
+Unit <mojo_top_0> synthesized.
+
+Synthesizing Unit <reset_conditioner_1>.
+    Related source file is "C:/Users/jieha/OneDrive/Documents/mojo/Electronic Game CAA 231119/work/planAhead/Electronic Game CAA 231119/Electronic Game CAA 231119.srcs/sources_1/imports/verilog/reset_conditioner_1.v".
+    Found 4-bit register for signal <M_stage_q>.
+    Summary:
+	inferred   4 D-type flip-flop(s).
+Unit <reset_conditioner_1> synthesized.
+
+Synthesizing Unit <logic_2>.
+    Related source file is "C:/Users/jieha/OneDrive/Documents/mojo/Electronic Game CAA 231119/work/planAhead/Electronic Game CAA 231119/Electronic Game CAA 231119.srcs/sources_1/imports/verilog/logic_2.v".
+INFO:Xst:3210 - "C:/Users/jieha/OneDrive/Documents/mojo/Electronic Game CAA 231119/work/planAhead/Electronic Game CAA 231119/Electronic Game CAA 231119.srcs/sources_1/imports/verilog/logic_2.v" line 115: Output port <alufn> of the instance <scoreModule> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:/Users/jieha/OneDrive/Documents/mojo/Electronic Game CAA 231119/work/planAhead/Electronic Game CAA 231119/Electronic Game CAA 231119.srcs/sources_1/imports/verilog/logic_2.v" line 115: Output port <ra_addr> of the instance <scoreModule> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:/Users/jieha/OneDrive/Documents/mojo/Electronic Game CAA 231119/work/planAhead/Electronic Game CAA 231119/Electronic Game CAA 231119.srcs/sources_1/imports/verilog/logic_2.v" line 115: Output port <rb_addr> of the instance <scoreModule> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:/Users/jieha/OneDrive/Documents/mojo/Electronic Game CAA 231119/work/planAhead/Electronic Game CAA 231119/Electronic Game CAA 231119.srcs/sources_1/imports/verilog/logic_2.v" line 115: Output port <wa_data> of the instance <scoreModule> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:/Users/jieha/OneDrive/Documents/mojo/Electronic Game CAA 231119/work/planAhead/Electronic Game CAA 231119/Electronic Game CAA 231119.srcs/sources_1/imports/verilog/logic_2.v" line 115: Output port <write> of the instance <scoreModule> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:/Users/jieha/OneDrive/Documents/mojo/Electronic Game CAA 231119/work/planAhead/Electronic Game CAA 231119/Electronic Game CAA 231119.srcs/sources_1/imports/verilog/logic_2.v" line 115: Output port <next> of the instance <scoreModule> is unconnected or connected to loadless signal.
+    Found 4-bit register for signal <M_length_q>.
+    Found 4-bit register for signal <M_count_q>.
+    Found 23-bit register for signal <M_release_q>.
+    Found 16-bit register for signal <M_press_input_q>.
+    Found 1-bit register for signal <M_cmpeq_q>.
+    Found 16-bit register for signal <M_multiplier_q>.
+    Found 1-bit register for signal <M_countPoints_q>.
+    Found 5-bit register for signal <M_state_q>.
+    Found 4-bit register for signal <M_stage_q>.
+    Found finite state machine <FSM_0> for signal <M_state_q>.
+    -----------------------------------------------------------------------
+    | States             | 21                                             |
+    | Transitions        | 95                                             |
+    | Inputs             | 27                                             |
+    | Outputs            | 27                                             |
+    | Clock              | clk (rising_edge)                              |
+    | Reset              | rst (positive)                                 |
+    | Reset type         | synchronous                                    |
+    | Reset State        | 00000                                          |
+    | Power Up State     | 00000                                          |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 4-bit subtractor for signal <M_count_q[3]_GND_3_o_sub_84_OUT> created at line 402.
+    Found 23-bit adder for signal <M_release_q[22]_GND_3_o_add_297_OUT> created at line 762.
+    Found 4-bit adder for signal <M_stage_q[3]_GND_3_o_add_301_OUT> created at line 784.
+    Found 16x20-bit Read Only RAM for signal <_n0811>
+    Found 4-bit comparator greater for signal <n0027> created at line 312
+    Found 4-bit comparator greater for signal <n0042> created at line 334
+    Found 4-bit comparator greater for signal <n0058> created at line 356
+    Found 4-bit comparator greater for signal <n0074> created at line 378
+    Found 23-bit comparator greater for signal <PWR_3_o_M_release_q[22]_LessThan_300_o> created at line 771
+    Found 3-bit comparator greater for signal <M_delay_value[2]_PWR_3_o_LessThan_324_o> created at line 806
+    Summary:
+	inferred   1 RAM(s).
+	inferred   3 Adder/Subtractor(s).
+	inferred  69 D-type flip-flop(s).
+	inferred   6 Comparator(s).
+	inferred  89 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <logic_2> synthesized.
+
+Synthesizing Unit <delayCount_6>.
+    Related source file is "C:/Users/jieha/OneDrive/Documents/mojo/Electronic Game CAA 231119/work/planAhead/Electronic Game CAA 231119/Electronic Game CAA 231119.srcs/sources_1/imports/verilog/delayCount_6.v".
+    Found 3-bit register for signal <M_count_q>.
+    Found 25-bit register for signal <M_flip_q>.
+    Found 25-bit adder for signal <M_flip_q[24]_GND_4_o_add_0_OUT> created at line 24.
+    Found 3-bit adder for signal <M_count_q[2]_GND_4_o_add_3_OUT> created at line 55.
+    Found 8x16-bit Read Only RAM for signal <light>
+    Summary:
+	inferred   1 RAM(s).
+	inferred   2 Adder/Subtractor(s).
+	inferred  28 D-type flip-flop(s).
+	inferred   2 Multiplexer(s).
+Unit <delayCount_6> synthesized.
+
+Synthesizing Unit <easyCount_7>.
+    Related source file is "C:/Users/jieha/OneDrive/Documents/mojo/Electronic Game CAA 231119/work/planAhead/Electronic Game CAA 231119/Electronic Game CAA 231119.srcs/sources_1/imports/verilog/easyCount_7.v".
+    Found 6-bit register for signal <M_count_q>.
+    Found 26-bit register for signal <M_flip_q>.
+    Found 26-bit adder for signal <M_flip_q[25]_GND_5_o_add_0_OUT> created at line 32.
+    Found 6-bit adder for signal <M_count_q[5]_GND_5_o_add_3_OUT> created at line 50.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  32 D-type flip-flop(s).
+	inferred   2 Multiplexer(s).
+Unit <easyCount_7> synthesized.
+
+Synthesizing Unit <randomSequence_18>.
+    Related source file is "C:/Users/jieha/OneDrive/Documents/mojo/Electronic Game CAA 231119/work/planAhead/Electronic Game CAA 231119/Electronic Game CAA 231119.srcs/sources_1/imports/verilog/randomSequence_18.v".
+    Found 64x16-bit Read Only RAM for signal <sequence>
+    Summary:
+	inferred   1 RAM(s).
+Unit <randomSequence_18> synthesized.
+
+Synthesizing Unit <medCount_8>.
+    Related source file is "C:/Users/jieha/OneDrive/Documents/mojo/Electronic Game CAA 231119/work/planAhead/Electronic Game CAA 231119/Electronic Game CAA 231119.srcs/sources_1/imports/verilog/medCount_8.v".
+    Found 6-bit register for signal <M_count_q>.
+    Found 25-bit register for signal <M_flip_q>.
+    Found 25-bit adder for signal <M_flip_q[24]_GND_7_o_add_0_OUT> created at line 32.
+    Found 6-bit adder for signal <M_count_q[5]_GND_7_o_add_3_OUT> created at line 50.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  31 D-type flip-flop(s).
+	inferred   2 Multiplexer(s).
+Unit <medCount_8> synthesized.
+
+Synthesizing Unit <hardCount_9>.
+    Related source file is "C:/Users/jieha/OneDrive/Documents/mojo/Electronic Game CAA 231119/work/planAhead/Electronic Game CAA 231119/Electronic Game CAA 231119.srcs/sources_1/imports/verilog/hardCount_9.v".
+    Found 6-bit register for signal <M_count_q>.
+    Found 24-bit register for signal <M_flip_q>.
+    Found 24-bit adder for signal <M_flip_q[23]_GND_8_o_add_0_OUT> created at line 32.
+    Found 6-bit adder for signal <M_count_q[5]_GND_8_o_add_3_OUT> created at line 50.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  30 D-type flip-flop(s).
+	inferred   2 Multiplexer(s).
+Unit <hardCount_9> synthesized.
+
+Synthesizing Unit <extremeCount_10>.
+    Related source file is "C:/Users/jieha/OneDrive/Documents/mojo/Electronic Game CAA 231119/work/planAhead/Electronic Game CAA 231119/Electronic Game CAA 231119.srcs/sources_1/imports/verilog/extremeCount_10.v".
+    Found 6-bit register for signal <M_count_q>.
+    Found 23-bit register for signal <M_flip_q>.
+    Found 23-bit adder for signal <M_flip_q[22]_GND_9_o_add_0_OUT> created at line 32.
+    Found 6-bit adder for signal <M_count_q[5]_GND_9_o_add_3_OUT> created at line 50.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  29 D-type flip-flop(s).
+	inferred   2 Multiplexer(s).
+Unit <extremeCount_10> synthesized.
+
+Synthesizing Unit <bossCount_11>.
+    Related source file is "C:/Users/jieha/OneDrive/Documents/mojo/Electronic Game CAA 231119/work/planAhead/Electronic Game CAA 231119/Electronic Game CAA 231119.srcs/sources_1/imports/verilog/bossCount_11.v".
+    Found 6-bit register for signal <M_count_q>.
+    Found 22-bit register for signal <M_flip_q>.
+    Found 22-bit adder for signal <M_flip_q[21]_GND_10_o_add_0_OUT> created at line 32.
+    Found 6-bit adder for signal <M_count_q[5]_GND_10_o_add_3_OUT> created at line 50.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  28 D-type flip-flop(s).
+	inferred   2 Multiplexer(s).
+Unit <bossCount_11> synthesized.
+
+Synthesizing Unit <regFile_3>.
+    Related source file is "C:/Users/jieha/OneDrive/Documents/mojo/Electronic Game CAA 231119/work/planAhead/Electronic Game CAA 231119/Electronic Game CAA 231119.srcs/sources_1/imports/verilog/regFile_3.v".
+    Found 16-bit register for signal <M_r2_data_q>.
+    Found 16-bit register for signal <M_r3_data_q>.
+    Found 16-bit register for signal <M_r4_data_q>.
+    Found 16-bit register for signal <M_r5_data_q>.
+    Found 16-bit register for signal <M_r6_data_q>.
+    Found 16-bit register for signal <M_r7_data_q>.
+    Found 16-bit register for signal <M_r8_data_q>.
+    Found 16-bit register for signal <M_r9_data_q>.
+    Found 16-bit register for signal <M_r10_data_q>.
+    Found 16-bit register for signal <M_r11_data_q>.
+    Found 16-bit register for signal <M_r12_data_q>.
+    Found 16-bit register for signal <M_r13_data_q>.
+    Found 16-bit register for signal <M_r14_data_q>.
+    Found 16-bit register for signal <M_r15_data_q>.
+    Found 16-bit register for signal <M_r16_data_q>.
+    Found 16-bit register for signal <M_r17_data_q>.
+    Found 16-bit register for signal <M_r18_data_q>.
+    Found 16-bit register for signal <M_r19_data_q>.
+    Found 16-bit register for signal <M_r1_data_q>.
+    Found 16-bit 22-to-1 multiplexer for signal <ra_data> created at line 148.
+    Found 16-bit 22-to-1 multiplexer for signal <rb_data> created at line 214.
+    Summary:
+	inferred 304 D-type flip-flop(s).
+	inferred  36 Multiplexer(s).
+Unit <regFile_3> synthesized.
+
+Synthesizing Unit <binary_to_bcd_4>.
+    Related source file is "C:/Users/jieha/OneDrive/Documents/mojo/Electronic Game CAA 231119/work/planAhead/Electronic Game CAA 231119/Electronic Game CAA 231119.srcs/sources_1/imports/verilog/binary_to_bcd_4.v".
+    Found 10-bit register for signal <M_originalscore_q>.
+    Found 44-bit register for signal <M_binaryscore_q>.
+    Found 4-bit register for signal <M_hiscore_count_q>.
+    Found 4-bit register for signal <M_score_count_q>.
+    Found 1-bit register for signal <M_hiscore_ones_q>.
+    Found 1-bit register for signal <M_hiscore_tens_q>.
+    Found 1-bit register for signal <M_hiscore_hundreds_q>.
+    Found 1-bit register for signal <M_score_ones_q>.
+    Found 1-bit register for signal <M_score_tens_q>.
+    Found 1-bit register for signal <M_score_hundreds_q>.
+    Found 10-bit register for signal <M_originalhiscore_q>.
+    Found 4-bit adder for signal <M_binaryscore_q[13]_GND_13_o_add_2_OUT> created at line 56.
+    Found 4-bit adder for signal <M_binaryscore_q[17]_GND_13_o_add_4_OUT> created at line 60.
+    Found 4-bit adder for signal <M_binaryscore_q[21]_GND_13_o_add_6_OUT> created at line 64.
+    Found 4-bit adder for signal <M_hiscore_count_q[3]_GND_13_o_add_7_OUT> created at line 68.
+    Found 4-bit adder for signal <M_binaryscore_q[35]_GND_13_o_add_14_OUT> created at line 78.
+    Found 4-bit adder for signal <M_binaryscore_q[39]_GND_13_o_add_16_OUT> created at line 82.
+    Found 4-bit adder for signal <M_binaryscore_q[43]_GND_13_o_add_18_OUT> created at line 86.
+    Found 4-bit adder for signal <M_score_count_q[3]_GND_13_o_add_19_OUT> created at line 90.
+    Found 4-bit comparator lessequal for signal <n0002> created at line 55
+    Found 4-bit comparator lessequal for signal <n0007> created at line 59
+    Found 4-bit comparator lessequal for signal <n0012> created at line 63
+    Found 4-bit comparator lessequal for signal <n0123> created at line 77
+    Found 4-bit comparator lessequal for signal <n0128> created at line 81
+    Found 4-bit comparator lessequal for signal <n0133> created at line 85
+    Found 10-bit comparator equal for signal <n0242> created at line 98
+    Found 10-bit comparator equal for signal <n0268> created at line 104
+    Summary:
+	inferred   8 Adder/Subtractor(s).
+	inferred  78 D-type flip-flop(s).
+	inferred   8 Comparator(s).
+	inferred 222 Multiplexer(s).
+Unit <binary_to_bcd_4> synthesized.
+
+Synthesizing Unit <multi_seven_seg_13>.
+    Related source file is "C:/Users/jieha/OneDrive/Documents/mojo/Electronic Game CAA 231119/work/planAhead/Electronic Game CAA 231119/Electronic Game CAA 231119.srcs/sources_1/imports/verilog/multi_seven_seg_13.v".
+    Found 5-bit adder for signal <M_ctr_value[2]_GND_14_o_add_0_OUT> created at line 48.
+    Found 47-bit shifter logical right for signal <n0010> created at line 48
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   1 Combinational logic shifter(s).
+Unit <multi_seven_seg_13> synthesized.
+
+Synthesizing Unit <counter_23>.
+    Related source file is "C:/Users/jieha/OneDrive/Documents/mojo/Electronic Game CAA 231119/work/planAhead/Electronic Game CAA 231119/Electronic Game CAA 231119.srcs/sources_1/imports/verilog/counter_23.v".
+    Found 19-bit register for signal <M_ctr_q>.
+    Found 19-bit adder for signal <M_ctr_q[18]_GND_15_o_add_0_OUT> created at line 35.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  19 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <counter_23> synthesized.
+
+Synthesizing Unit <seven_seg_24>.
+    Related source file is "C:/Users/jieha/OneDrive/Documents/mojo/Electronic Game CAA 231119/work/planAhead/Electronic Game CAA 231119/Electronic Game CAA 231119.srcs/sources_1/imports/verilog/seven_seg_24.v".
+    Found 16x7-bit Read Only RAM for signal <segs>
+    Summary:
+	inferred   1 RAM(s).
+Unit <seven_seg_24> synthesized.
+
+Synthesizing Unit <decoder_25>.
+    Related source file is "C:/Users/jieha/OneDrive/Documents/mojo/Electronic Game CAA 231119/work/planAhead/Electronic Game CAA 231119/Electronic Game CAA 231119.srcs/sources_1/imports/verilog/decoder_25.v".
+    Summary:
+	no macro.
+Unit <decoder_25> synthesized.
+
+Synthesizing Unit <alu_5>.
+    Related source file is "C:/Users/jieha/OneDrive/Documents/mojo/Electronic Game CAA 231119/work/planAhead/Electronic Game CAA 231119/Electronic Game CAA 231119.srcs/sources_1/imports/verilog/alu_5.v".
+    Found 16-bit 4-to-1 multiplexer for signal <alu> created at line 86.
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <alu_5> synthesized.
+
+Synthesizing Unit <adder_14>.
+    Related source file is "C:/Users/jieha/OneDrive/Documents/mojo/Electronic Game CAA 231119/work/planAhead/Electronic Game CAA 231119/Electronic Game CAA 231119.srcs/sources_1/imports/verilog/adder_14.v".
+    Found 16-bit subtractor for signal <a[15]_b[15]_sub_3_OUT> created at line 31.
+    Found 16-bit adder for signal <a[15]_b[15]_add_0_OUT> created at line 25.
+    Found 16x16-bit multiplier for signal <n0033> created at line 37.
+    Found 16-bit 4-to-1 multiplexer for signal <out> created at line 23.
+    Found 1-bit 3-to-1 multiplexer for signal <z> created at line 23.
+    Found 1-bit 3-to-1 multiplexer for signal <v> created at line 23.
+    Found 1-bit 3-to-1 multiplexer for signal <n> created at line 23.
+    Summary:
+	inferred   1 Multiplier(s).
+	inferred   2 Adder/Subtractor(s).
+	inferred   4 Multiplexer(s).
+Unit <adder_14> synthesized.
+
+Synthesizing Unit <compare_15>.
+    Related source file is "C:/Users/jieha/OneDrive/Documents/mojo/Electronic Game CAA 231119/work/planAhead/Electronic Game CAA 231119/Electronic Game CAA 231119.srcs/sources_1/imports/verilog/compare_15.v".
+    Found 16-bit 4-to-1 multiplexer for signal <cmp> created at line 20.
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <compare_15> synthesized.
+
+Synthesizing Unit <boolean_16>.
+    Related source file is "C:/Users/jieha/OneDrive/Documents/mojo/Electronic Game CAA 231119/work/planAhead/Electronic Game CAA 231119/Electronic Game CAA 231119.srcs/sources_1/imports/verilog/boolean_16.v".
+    Summary:
+Unit <boolean_16> synthesized.
+
+Synthesizing Unit <shifter_17>.
+    Related source file is "C:/Users/jieha/OneDrive/Documents/mojo/Electronic Game CAA 231119/work/planAhead/Electronic Game CAA 231119/Electronic Game CAA 231119.srcs/sources_1/imports/verilog/shifter_17.v".
+    Found 16-bit shifter logical left for signal <a[15]_b[3]_shift_left_0_OUT> created at line 20
+    Found 16-bit shifter logical right for signal <a[15]_b[3]_shift_right_1_OUT> created at line 23
+    Found 16-bit shifter arithmetic right for signal <a[15]_b[3]_shift_right_2_OUT> created at line 26
+    Found 16-bit 4-to-1 multiplexer for signal <shift> created at line 18.
+    Summary:
+	inferred   1 Multiplexer(s).
+	inferred   3 Combinational logic shifter(s).
+Unit <shifter_17> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 8
+ 16x20-bit single-port Read Only RAM                   : 1
+ 16x7-bit single-port Read Only RAM                    : 1
+ 64x16-bit single-port Read Only RAM                   : 5
+ 8x16-bit single-port Read Only RAM                    : 1
+# Multipliers                                          : 1
+ 16x16-bit multiplier                                  : 1
+# Adders/Subtractors                                   : 27
+ 16-bit adder                                          : 1
+ 16-bit subtractor                                     : 1
+ 19-bit adder                                          : 1
+ 22-bit adder                                          : 1
+ 23-bit adder                                          : 2
+ 24-bit adder                                          : 1
+ 25-bit adder                                          : 2
+ 26-bit adder                                          : 1
+ 3-bit adder                                           : 1
+ 4-bit adder                                           : 9
+ 4-bit subtractor                                      : 1
+ 5-bit adder                                           : 1
+ 6-bit adder                                           : 5
+# Registers                                            : 51
+ 1-bit register                                        : 8
+ 10-bit register                                       : 2
+ 16-bit register                                       : 20
+ 19-bit register                                       : 1
+ 20-bit register                                       : 1
+ 22-bit register                                       : 1
+ 23-bit register                                       : 2
+ 24-bit register                                       : 1
+ 25-bit register                                       : 2
+ 26-bit register                                       : 1
+ 3-bit register                                        : 1
+ 4-bit register                                        : 5
+ 44-bit register                                       : 1
+ 6-bit register                                        : 5
+# Comparators                                          : 14
+ 10-bit comparator equal                               : 2
+ 23-bit comparator greater                             : 1
+ 3-bit comparator greater                              : 1
+ 4-bit comparator greater                              : 4
+ 4-bit comparator lessequal                            : 6
+# Multiplexers                                         : 367
+ 1-bit 2-to-1 multiplexer                              : 240
+ 1-bit 3-to-1 multiplexer                              : 3
+ 16-bit 2-to-1 multiplexer                             : 67
+ 16-bit 22-to-1 multiplexer                            : 2
+ 16-bit 4-to-1 multiplexer                             : 4
+ 19-bit 2-to-1 multiplexer                             : 1
+ 22-bit 2-to-1 multiplexer                             : 1
+ 23-bit 2-to-1 multiplexer                             : 9
+ 24-bit 2-to-1 multiplexer                             : 1
+ 25-bit 2-to-1 multiplexer                             : 2
+ 26-bit 2-to-1 multiplexer                             : 1
+ 3-bit 2-to-1 multiplexer                              : 1
+ 4-bit 2-to-1 multiplexer                              : 11
+ 5-bit 2-to-1 multiplexer                              : 21
+ 6-bit 2-to-1 multiplexer                              : 3
+# Logic shifters                                       : 4
+ 16-bit shifter arithmetic right                       : 1
+ 16-bit shifter logical left                           : 1
+ 16-bit shifter logical right                          : 1
+ 47-bit shifter logical right                          : 1
+# Tristates                                            : 6
+ 1-bit tristate buffer                                 : 6
+# FSMs                                                 : 1
+# Xors                                                 : 2
+ 1-bit xor2                                            : 1
+ 16-bit xor2                                           : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <binary_to_bcd_4>.
+The following registers are absorbed into counter <M_hiscore_count_q>: 1 register on signal <M_hiscore_count_q>.
+The following registers are absorbed into counter <M_score_count_q>: 1 register on signal <M_score_count_q>.
+Unit <binary_to_bcd_4> synthesized (advanced).
+
+Synthesizing (advanced) Unit <bossCount_11>.
+The following registers are absorbed into counter <M_flip_q>: 1 register on signal <M_flip_q>.
+The following registers are absorbed into counter <M_count_q>: 1 register on signal <M_count_q>.
+Unit <bossCount_11> synthesized (advanced).
+
+Synthesizing (advanced) Unit <counter_23>.
+The following registers are absorbed into counter <M_ctr_q>: 1 register on signal <M_ctr_q>.
+Unit <counter_23> synthesized (advanced).
+
+Synthesizing (advanced) Unit <delayCount_6>.
+The following registers are absorbed into counter <M_count_q>: 1 register on signal <M_count_q>.
+The following registers are absorbed into counter <M_flip_q>: 1 register on signal <M_flip_q>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_light> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 8-word x 16-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <M_count_q>     |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <light>         |          |
+    -----------------------------------------------------------------------
+Unit <delayCount_6> synthesized (advanced).
+
+Synthesizing (advanced) Unit <easyCount_7>.
+The following registers are absorbed into counter <M_flip_q>: 1 register on signal <M_flip_q>.
+The following registers are absorbed into counter <M_count_q>: 1 register on signal <M_count_q>.
+Unit <easyCount_7> synthesized (advanced).
+
+Synthesizing (advanced) Unit <extremeCount_10>.
+The following registers are absorbed into counter <M_flip_q>: 1 register on signal <M_flip_q>.
+The following registers are absorbed into counter <M_count_q>: 1 register on signal <M_count_q>.
+Unit <extremeCount_10> synthesized (advanced).
+
+Synthesizing (advanced) Unit <hardCount_9>.
+The following registers are absorbed into counter <M_flip_q>: 1 register on signal <M_flip_q>.
+The following registers are absorbed into counter <M_count_q>: 1 register on signal <M_count_q>.
+Unit <hardCount_9> synthesized (advanced).
+
+Synthesizing (advanced) Unit <logic_2>.
+INFO:Xst:3212 - HDL ADVISOR - Asynchronous or synchronous initialization of the register <M_stage_q> prevents it from being combined with the RAM <Mram__n0811> for implementation as read-only block RAM.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 20-bit                    |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <M_stage_q>     |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3231 - The small RAM <Mram__n0811> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+Unit <logic_2> synthesized (advanced).
+
+Synthesizing (advanced) Unit <medCount_8>.
+The following registers are absorbed into counter <M_flip_q>: 1 register on signal <M_flip_q>.
+The following registers are absorbed into counter <M_count_q>: 1 register on signal <M_count_q>.
+Unit <medCount_8> synthesized (advanced).
+
+Synthesizing (advanced) Unit <randomSequence_18>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_sequence> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 64-word x 16-bit                    |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <value>         |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <sequence>      |          |
+    -----------------------------------------------------------------------
+Unit <randomSequence_18> synthesized (advanced).
+
+Synthesizing (advanced) Unit <seven_seg_24>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_segs> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 7-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <char>          |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <segs>          |          |
+    -----------------------------------------------------------------------
+Unit <seven_seg_24> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 8
+ 16x20-bit single-port distributed Read Only RAM       : 1
+ 16x7-bit single-port distributed Read Only RAM        : 1
+ 64x16-bit single-port distributed Read Only RAM       : 5
+ 8x16-bit single-port distributed Read Only RAM        : 1
+# Multipliers                                          : 1
+ 16x16-bit multiplier                                  : 1
+# Adders/Subtractors                                   : 12
+ 16-bit adder                                          : 1
+ 16-bit subtractor                                     : 1
+ 23-bit adder                                          : 1
+ 4-bit adder                                           : 7
+ 4-bit subtractor                                      : 1
+ 5-bit adder                                           : 1
+# Counters                                             : 15
+ 19-bit up counter                                     : 1
+ 22-bit up counter                                     : 1
+ 23-bit up counter                                     : 1
+ 24-bit up counter                                     : 1
+ 25-bit up counter                                     : 2
+ 26-bit up counter                                     : 1
+ 3-bit up counter                                      : 1
+ 4-bit up counter                                      : 2
+ 6-bit up counter                                      : 5
+# Registers                                            : 447
+ Flip-Flops                                            : 447
+# Comparators                                          : 14
+ 10-bit comparator equal                               : 2
+ 23-bit comparator greater                             : 1
+ 3-bit comparator greater                              : 1
+ 4-bit comparator greater                              : 4
+ 4-bit comparator lessequal                            : 6
+# Multiplexers                                         : 387
+ 1-bit 2-to-1 multiplexer                              : 240
+ 1-bit 22-to-1 multiplexer                             : 32
+ 1-bit 3-to-1 multiplexer                              : 3
+ 16-bit 2-to-1 multiplexer                             : 67
+ 16-bit 4-to-1 multiplexer                             : 4
+ 23-bit 2-to-1 multiplexer                             : 8
+ 4-bit 2-to-1 multiplexer                              : 9
+ 5-bit 2-to-1 multiplexer                              : 21
+ 6-bit 2-to-1 multiplexer                              : 3
+# Logic shifters                                       : 4
+ 16-bit shifter arithmetic right                       : 1
+ 16-bit shifter logical left                           : 1
+ 16-bit shifter logical right                          : 1
+ 47-bit shifter logical right                          : 1
+# FSMs                                                 : 1
+# Xors                                                 : 2
+ 1-bit xor2                                            : 1
+ 16-bit xor2                                           : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <fsm_logic/FSM_0> on signal <M_state_q[1:5]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ 00000 | 00000
+ 00010 | 00010
+ 00001 | 00001
+ 00011 | 00011
+ 00100 | 00100
+ 00101 | 00101
+ 00110 | 00110
+ 00111 | 00111
+ 01000 | 01000
+ 01001 | 01001
+ 01010 | 01010
+ 01011 | 01011
+ 01110 | 01110
+ 01101 | 01101
+ 01100 | 01100
+ 10000 | 10000
+ 01111 | 01111
+ 10011 | 10011
+ 10001 | 10001
+ 10010 | 10010
+ 10100 | 10100
+-------------------
+WARNING:Xst:1293 - FF/Latch <M_multiplier_q_7> has a constant value of 0 in block <logic_2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_multiplier_q_8> has a constant value of 0 in block <logic_2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_multiplier_q_9> has a constant value of 0 in block <logic_2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_multiplier_q_10> has a constant value of 0 in block <logic_2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_multiplier_q_11> has a constant value of 0 in block <logic_2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_multiplier_q_12> has a constant value of 0 in block <logic_2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_multiplier_q_13> has a constant value of 0 in block <logic_2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_multiplier_q_14> has a constant value of 0 in block <logic_2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_multiplier_q_15> has a constant value of 0 in block <logic_2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_length_q_0> has a constant value of 0 in block <logic_2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_length_q_1> has a constant value of 0 in block <logic_2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_length_q_2> has a constant value of 0 in block <logic_2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_length_q_3> has a constant value of 0 in block <logic_2>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <mojo_top_0> ...
+
+Optimizing unit <logic_2> ...
+
+Optimizing unit <regFile_3> ...
+
+Optimizing unit <binary_to_bcd_4> ...
+
+Optimizing unit <adder_14> ...
+WARNING:Xst:1293 - FF/Latch <bc/M_binaryscore_q_40> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <bc/M_binaryscore_q_41> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <bc/M_binaryscore_q_42> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <bc/M_binaryscore_q_43> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <regFile/M_r17_data_q_2> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <regFile/M_r17_data_q_3> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <regFile/M_r17_data_q_4> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <regFile/M_r17_data_q_5> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <regFile/M_r17_data_q_6> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <regFile/M_r17_data_q_7> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <regFile/M_r17_data_q_8> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <regFile/M_r17_data_q_9> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <regFile/M_r17_data_q_10> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <regFile/M_r17_data_q_11> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <regFile/M_r17_data_q_12> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <regFile/M_r17_data_q_13> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <regFile/M_r17_data_q_14> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <regFile/M_r17_data_q_15> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <regFile/M_r19_data_q_0> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <regFile/M_r19_data_q_1> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <regFile/M_r19_data_q_2> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <bc/M_score_hundreds_q> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <bc/M_score_ones_q> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <bc/M_score_tens_q> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <bc/M_binaryscore_q_22> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <bc/M_binaryscore_q_23> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <bc/M_binaryscore_q_24> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <bc/M_binaryscore_q_25> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <bc/M_binaryscore_q_26> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <bc/M_binaryscore_q_27> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <bc/M_binaryscore_q_28> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <bc/M_binaryscore_q_29> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <bc/M_binaryscore_q_30> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <bc/M_binaryscore_q_31> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <bc/M_binaryscore_q_32> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <bc/M_binaryscore_q_33> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <bc/M_binaryscore_q_34> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <bc/M_binaryscore_q_35> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <bc/M_binaryscore_q_36> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <bc/M_binaryscore_q_37> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <bc/M_binaryscore_q_38> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <bc/M_binaryscore_q_39> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <regFile/M_r16_data_q_8> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <regFile/M_r16_data_q_9> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <regFile/M_r16_data_q_10> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <regFile/M_r16_data_q_11> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <regFile/M_r16_data_q_12> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <regFile/M_r16_data_q_13> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <regFile/M_r16_data_q_14> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <regFile/M_r16_data_q_15> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <regFile/M_r18_data_q_3> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <regFile/M_r18_data_q_4> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <regFile/M_r18_data_q_5> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <regFile/M_r18_data_q_6> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <regFile/M_r18_data_q_7> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <regFile/M_r18_data_q_8> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <regFile/M_r18_data_q_9> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <regFile/M_r18_data_q_10> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <regFile/M_r18_data_q_11> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <regFile/M_r18_data_q_12> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <regFile/M_r18_data_q_13> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <regFile/M_r18_data_q_14> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <regFile/M_r18_data_q_15> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <regFile/M_r19_data_q_3> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <regFile/M_r19_data_q_4> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <regFile/M_r19_data_q_5> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <regFile/M_r19_data_q_6> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <regFile/M_r19_data_q_7> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <regFile/M_r19_data_q_8> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <regFile/M_r19_data_q_9> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <regFile/M_r19_data_q_10> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <regFile/M_r19_data_q_11> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <regFile/M_r19_data_q_12> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <regFile/M_r16_data_q_7> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <regFile/M_r16_data_q_6> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <regFile/M_r16_data_q_5> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <regFile/M_r16_data_q_4> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <regFile/M_r16_data_q_3> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <regFile/M_r16_data_q_2> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <regFile/M_r16_data_q_1> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <regFile/M_r16_data_q_0> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <regFile/M_r19_data_q_15> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <regFile/M_r19_data_q_14> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <regFile/M_r19_data_q_13> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <bc/M_originalscore_q_9> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <bc/M_originalscore_q_8> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <bc/M_originalscore_q_7> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <bc/M_originalscore_q_6> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <bc/M_originalscore_q_5> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <bc/M_originalscore_q_4> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <bc/M_originalscore_q_3> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <bc/M_originalscore_q_2> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <bc/M_originalscore_q_1> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <bc/M_originalscore_q_0> has a constant value of 0 in block <mojo_top_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <bc/M_score_count_q_3> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <bc/M_score_count_q_2> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <bc/M_score_count_q_1> of sequential type is unconnected in block <mojo_top_0>.
+WARNING:Xst:2677 - Node <bc/M_score_count_q_0> of sequential type is unconnected in block <mojo_top_0>.
+INFO:Xst:2261 - The FF/Latch <fsm_logic/extreme/M_flip_q_22> in Unit <mojo_top_0> is equivalent to the following 3 FFs/Latches, which will be removed : <fsm_logic/hard/M_flip_q_22> <fsm_logic/med/M_flip_q_22> <fsm_logic/easy/M_flip_q_22> 
+INFO:Xst:2261 - The FF/Latch <fsm_logic/boss/M_flip_q_0> in Unit <mojo_top_0> is equivalent to the following 4 FFs/Latches, which will be removed : <fsm_logic/extreme/M_flip_q_0> <fsm_logic/hard/M_flip_q_0> <fsm_logic/med/M_flip_q_0> <fsm_logic/easy/M_flip_q_0> 
+INFO:Xst:2261 - The FF/Latch <fsm_logic/boss/M_flip_q_1> in Unit <mojo_top_0> is equivalent to the following 4 FFs/Latches, which will be removed : <fsm_logic/extreme/M_flip_q_1> <fsm_logic/hard/M_flip_q_1> <fsm_logic/med/M_flip_q_1> <fsm_logic/easy/M_flip_q_1> 
+INFO:Xst:2261 - The FF/Latch <fsm_logic/boss/M_flip_q_2> in Unit <mojo_top_0> is equivalent to the following 4 FFs/Latches, which will be removed : <fsm_logic/extreme/M_flip_q_2> <fsm_logic/hard/M_flip_q_2> <fsm_logic/med/M_flip_q_2> <fsm_logic/easy/M_flip_q_2> 
+INFO:Xst:2261 - The FF/Latch <fsm_logic/boss/M_flip_q_3> in Unit <mojo_top_0> is equivalent to the following 4 FFs/Latches, which will be removed : <fsm_logic/extreme/M_flip_q_3> <fsm_logic/hard/M_flip_q_3> <fsm_logic/med/M_flip_q_3> <fsm_logic/easy/M_flip_q_3> 
+INFO:Xst:2261 - The FF/Latch <fsm_logic/boss/M_flip_q_4> in Unit <mojo_top_0> is equivalent to the following 4 FFs/Latches, which will be removed : <fsm_logic/extreme/M_flip_q_4> <fsm_logic/hard/M_flip_q_4> <fsm_logic/med/M_flip_q_4> <fsm_logic/easy/M_flip_q_4> 
+INFO:Xst:2261 - The FF/Latch <fsm_logic/boss/M_flip_q_5> in Unit <mojo_top_0> is equivalent to the following 4 FFs/Latches, which will be removed : <fsm_logic/extreme/M_flip_q_5> <fsm_logic/hard/M_flip_q_5> <fsm_logic/med/M_flip_q_5> <fsm_logic/easy/M_flip_q_5> 
+INFO:Xst:2261 - The FF/Latch <fsm_logic/boss/M_flip_q_6> in Unit <mojo_top_0> is equivalent to the following 4 FFs/Latches, which will be removed : <fsm_logic/extreme/M_flip_q_6> <fsm_logic/hard/M_flip_q_6> <fsm_logic/med/M_flip_q_6> <fsm_logic/easy/M_flip_q_6> 
+INFO:Xst:2261 - The FF/Latch <fsm_logic/boss/M_flip_q_7> in Unit <mojo_top_0> is equivalent to the following 4 FFs/Latches, which will be removed : <fsm_logic/extreme/M_flip_q_7> <fsm_logic/hard/M_flip_q_7> <fsm_logic/med/M_flip_q_7> <fsm_logic/easy/M_flip_q_7> 
+INFO:Xst:2261 - The FF/Latch <fsm_logic/boss/M_flip_q_8> in Unit <mojo_top_0> is equivalent to the following 4 FFs/Latches, which will be removed : <fsm_logic/extreme/M_flip_q_8> <fsm_logic/hard/M_flip_q_8> <fsm_logic/med/M_flip_q_8> <fsm_logic/easy/M_flip_q_8> 
+INFO:Xst:2261 - The FF/Latch <fsm_logic/boss/M_flip_q_9> in Unit <mojo_top_0> is equivalent to the following 4 FFs/Latches, which will be removed : <fsm_logic/extreme/M_flip_q_9> <fsm_logic/hard/M_flip_q_9> <fsm_logic/med/M_flip_q_9> <fsm_logic/easy/M_flip_q_9> 
+INFO:Xst:2261 - The FF/Latch <fsm_logic/boss/M_flip_q_10> in Unit <mojo_top_0> is equivalent to the following 4 FFs/Latches, which will be removed : <fsm_logic/extreme/M_flip_q_10> <fsm_logic/hard/M_flip_q_10> <fsm_logic/med/M_flip_q_10> <fsm_logic/easy/M_flip_q_10> 
+INFO:Xst:2261 - The FF/Latch <fsm_logic/boss/M_flip_q_11> in Unit <mojo_top_0> is equivalent to the following 4 FFs/Latches, which will be removed : <fsm_logic/extreme/M_flip_q_11> <fsm_logic/hard/M_flip_q_11> <fsm_logic/med/M_flip_q_11> <fsm_logic/easy/M_flip_q_11> 
+INFO:Xst:2261 - The FF/Latch <fsm_logic/boss/M_flip_q_12> in Unit <mojo_top_0> is equivalent to the following 4 FFs/Latches, which will be removed : <fsm_logic/extreme/M_flip_q_12> <fsm_logic/hard/M_flip_q_12> <fsm_logic/med/M_flip_q_12> <fsm_logic/easy/M_flip_q_12> 
+INFO:Xst:2261 - The FF/Latch <fsm_logic/boss/M_flip_q_13> in Unit <mojo_top_0> is equivalent to the following 4 FFs/Latches, which will be removed : <fsm_logic/extreme/M_flip_q_13> <fsm_logic/hard/M_flip_q_13> <fsm_logic/med/M_flip_q_13> <fsm_logic/easy/M_flip_q_13> 
+INFO:Xst:2261 - The FF/Latch <fsm_logic/boss/M_flip_q_14> in Unit <mojo_top_0> is equivalent to the following 4 FFs/Latches, which will be removed : <fsm_logic/extreme/M_flip_q_14> <fsm_logic/hard/M_flip_q_14> <fsm_logic/med/M_flip_q_14> <fsm_logic/easy/M_flip_q_14> 
+INFO:Xst:2261 - The FF/Latch <fsm_logic/boss/M_flip_q_20> in Unit <mojo_top_0> is equivalent to the following 4 FFs/Latches, which will be removed : <fsm_logic/extreme/M_flip_q_20> <fsm_logic/hard/M_flip_q_20> <fsm_logic/med/M_flip_q_20> <fsm_logic/easy/M_flip_q_20> 
+INFO:Xst:2261 - The FF/Latch <fsm_logic/boss/M_flip_q_15> in Unit <mojo_top_0> is equivalent to the following 4 FFs/Latches, which will be removed : <fsm_logic/extreme/M_flip_q_15> <fsm_logic/hard/M_flip_q_15> <fsm_logic/med/M_flip_q_15> <fsm_logic/easy/M_flip_q_15> 
+INFO:Xst:2261 - The FF/Latch <fsm_logic/boss/M_flip_q_21> in Unit <mojo_top_0> is equivalent to the following 4 FFs/Latches, which will be removed : <fsm_logic/extreme/M_flip_q_21> <fsm_logic/hard/M_flip_q_21> <fsm_logic/med/M_flip_q_21> <fsm_logic/easy/M_flip_q_21> 
+INFO:Xst:2261 - The FF/Latch <fsm_logic/boss/M_flip_q_16> in Unit <mojo_top_0> is equivalent to the following 4 FFs/Latches, which will be removed : <fsm_logic/extreme/M_flip_q_16> <fsm_logic/hard/M_flip_q_16> <fsm_logic/med/M_flip_q_16> <fsm_logic/easy/M_flip_q_16> 
+INFO:Xst:2261 - The FF/Latch <fsm_logic/boss/M_flip_q_17> in Unit <mojo_top_0> is equivalent to the following 4 FFs/Latches, which will be removed : <fsm_logic/extreme/M_flip_q_17> <fsm_logic/hard/M_flip_q_17> <fsm_logic/med/M_flip_q_17> <fsm_logic/easy/M_flip_q_17> 
+INFO:Xst:2261 - The FF/Latch <fsm_logic/boss/M_flip_q_18> in Unit <mojo_top_0> is equivalent to the following 4 FFs/Latches, which will be removed : <fsm_logic/extreme/M_flip_q_18> <fsm_logic/hard/M_flip_q_18> <fsm_logic/med/M_flip_q_18> <fsm_logic/easy/M_flip_q_18> 
+INFO:Xst:2261 - The FF/Latch <fsm_logic/boss/M_flip_q_19> in Unit <mojo_top_0> is equivalent to the following 4 FFs/Latches, which will be removed : <fsm_logic/extreme/M_flip_q_19> <fsm_logic/hard/M_flip_q_19> <fsm_logic/med/M_flip_q_19> <fsm_logic/easy/M_flip_q_19> 
+INFO:Xst:2261 - The FF/Latch <fsm_logic/med/M_flip_q_24> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <fsm_logic/easy/M_flip_q_24> 
+INFO:Xst:2261 - The FF/Latch <regFile/M_r17_data_q_1> in Unit <mojo_top_0> is equivalent to the following FF/Latch, which will be removed : <regFile/M_r17_data_q_0> 
+INFO:Xst:2261 - The FF/Latch <fsm_logic/hard/M_flip_q_23> in Unit <mojo_top_0> is equivalent to the following 2 FFs/Latches, which will be removed : <fsm_logic/med/M_flip_q_23> <fsm_logic/easy/M_flip_q_23> 
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 0) on block mojo_top_0, actual ratio is 30.
+FlipFlop fsm_logic/M_stage_q_0 has been replicated 1 time(s)
+FlipFlop fsm_logic/M_stage_q_1 has been replicated 1 time(s)
+FlipFlop fsm_logic/M_state_q_FSM_FFd1 has been replicated 1 time(s)
+FlipFlop fsm_logic/M_state_q_FSM_FFd2 has been replicated 2 time(s)
+FlipFlop fsm_logic/M_state_q_FSM_FFd3 has been replicated 2 time(s)
+FlipFlop fsm_logic/M_state_q_FSM_FFd4 has been replicated 1 time(s)
+FlipFlop fsm_logic/M_state_q_FSM_FFd5 has been replicated 1 time(s)
+FlipFlop fsm_logic/boss/M_count_q_0 has been replicated 1 time(s)
+FlipFlop fsm_logic/easy/M_count_q_0 has been replicated 2 time(s)
+FlipFlop fsm_logic/extreme/M_count_q_0 has been replicated 1 time(s)
+FlipFlop fsm_logic/hard/M_count_q_0 has been replicated 1 time(s)
+FlipFlop fsm_logic/med/M_count_q_0 has been replicated 1 time(s)
+
+Final Macro Processing ...
+
+Processing Unit <mojo_top_0> :
+INFO:Xst:741 - HDL ADVISOR - A 4-bit shift register was found for signal <reset_cond/M_stage_q_3> and currently occupies 4 logic cells (2 slices). Removing the set/reset logic would take advantage of SRL32 (and derived) primitives and reduce this to 1 logic cells (1 slices). Evaluate if the set/reset can be removed for this simple shift register. The majority of simple pipeline structures do not need to be set/reset operationally.
+Unit <mojo_top_0> processed.
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 466
+ Flip-Flops                                            : 466
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : mojo_top_0.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 2491
+#      GND                         : 13
+#      INV                         : 42
+#      LUT1                        : 40
+#      LUT2                        : 65
+#      LUT3                        : 38
+#      LUT4                        : 233
+#      LUT5                        : 483
+#      LUT6                        : 1036
+#      MUXCY                       : 213
+#      MUXF7                       : 198
+#      VCC                         : 5
+#      XORCY                       : 125
+# FlipFlops/Latches                : 466
+#      FDR                         : 114
+#      FDRE                        : 348
+#      FDS                         : 4
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 61
+#      IBUF                        : 18
+#      OBUF                        : 37
+#      OBUFT                       : 6
+# DSPs                             : 1
+#      DSP48A1                     : 1
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx9tqg144-2 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             466  out of  11440     4%  
+ Number of Slice LUTs:                 1937  out of   5720    33%  
+    Number used as Logic:              1937  out of   5720    33%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   2091
+   Number with an unused Flip Flop:    1625  out of   2091    77%  
+   Number with an unused LUT:           154  out of   2091     7%  
+   Number of fully used LUT-FF pairs:   312  out of   2091    14%  
+   Number of unique control sets:        41
+
+IO Utilization: 
+ Number of IOs:                          68
+ Number of bonded IOBs:                  62  out of    102    60%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+ Number of DSP48A1s:                      1  out of     16     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 466   |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -2
+
+   Minimum period: 18.941ns (Maximum Frequency: 52.794MHz)
+   Minimum input arrival time before clock: 21.947ns
+   Maximum output required time after clock: 22.736ns
+   Maximum combinational path delay: 25.742ns
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 18.941ns (frequency: 52.794MHz)
+  Total number of paths / destination ports: 201794148 / 1259
+-------------------------------------------------------------------------
+Delay:               18.941ns (Levels of Logic = 34)
+  Source:            fsm_logic/med/M_count_q_4 (FF)
+  Destination:       regFile/M_r1_data_q_0 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: fsm_logic/med/M_count_q_4 to regFile/M_r1_data_q_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q            16   0.525   1.612  M_count_q_4 (M_count_q_4)
+     end scope: 'fsm_logic/med:M_count_q_4'
+     end scope: 'fsm_logic:M_count_q_4'
+     begin scope: 'fsm_logic_med:M_count_q_4'
+     begin scope: 'fsm_logic_med/randSeq:M_count_q_4'
+     LUT6:I1->O            3   0.254   1.221  Mram_sequence31 (M_randSeq_sequence<3>)
+     end scope: 'fsm_logic_med/randSeq:M_randSeq_sequence<3>'
+     end scope: 'fsm_logic_med:M_randSeq_sequence<3>'
+     begin scope: 'fsm_logic:fsm_logic/med/M_randSeq_sequence<3>'
+     LUT6:I0->O            1   0.254   0.682  M_med_light[15]_M_med_value[24]_AND_6_o5 (M_med_light[15]_M_med_value[24]_AND_6_o5)
+     LUT3:I2->O            3   0.254   0.766  M_med_light[15]_M_med_value[24]_AND_6_o6_SW0 (N62)
+     LUT6:I5->O            6   0.254   1.306  M_med_light[15]_M_med_value[24]_AND_6_o6_1 (M_med_light[15]_M_med_value[24]_AND_6_o6)
+     LUT6:I1->O           18   0.254   1.235  Mmux_ra_addr33_3 (Mmux_ra_addr332)
+     end scope: 'fsm_logic:Mmux_ra_addr332'
+     begin scope: 'regFile:Mmux_ra_addr332'
+     LUT6:I5->O            1   0.254   0.910  mux_9 (mux_9)
+     LUT6:I3->O            1   0.235   0.000  mux_2_f7_F (N883)
+     MUXF7:I0->O           8   0.163   0.943  mux_2_f7 (ra_data<0>1)
+     INV:I->O              1   0.255   0.681  ra_data<0>_inv1_INV_0 (ra_data<0>)
+     end scope: 'regFile:ra_data<0>'
+     begin scope: 'alu:a<0>'
+     begin scope: 'alu/add:a<0>'
+     MUXCY:DI->O           1   0.181   0.000  Madd_a[15]_b[15]_add_0_OUT_cy<0> (Madd_a[15]_b[15]_add_0_OUT_cy<0>)
+     MUXCY:CI->O           1   0.023   0.000  Madd_a[15]_b[15]_add_0_OUT_cy<1> (Madd_a[15]_b[15]_add_0_OUT_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  Madd_a[15]_b[15]_add_0_OUT_cy<2> (Madd_a[15]_b[15]_add_0_OUT_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  Madd_a[15]_b[15]_add_0_OUT_cy<3> (Madd_a[15]_b[15]_add_0_OUT_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  Madd_a[15]_b[15]_add_0_OUT_cy<4> (Madd_a[15]_b[15]_add_0_OUT_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  Madd_a[15]_b[15]_add_0_OUT_cy<5> (Madd_a[15]_b[15]_add_0_OUT_cy<5>)
+     MUXCY:CI->O           1   0.023   0.000  Madd_a[15]_b[15]_add_0_OUT_cy<6> (Madd_a[15]_b[15]_add_0_OUT_cy<6>)
+     MUXCY:CI->O           1   0.023   0.000  Madd_a[15]_b[15]_add_0_OUT_cy<7> (Madd_a[15]_b[15]_add_0_OUT_cy<7>)
+     MUXCY:CI->O           1   0.023   0.000  Madd_a[15]_b[15]_add_0_OUT_cy<8> (Madd_a[15]_b[15]_add_0_OUT_cy<8>)
+     MUXCY:CI->O           1   0.023   0.000  Madd_a[15]_b[15]_add_0_OUT_cy<9> (Madd_a[15]_b[15]_add_0_OUT_cy<9>)
+     MUXCY:CI->O           1   0.023   0.000  Madd_a[15]_b[15]_add_0_OUT_cy<10> (Madd_a[15]_b[15]_add_0_OUT_cy<10>)
+     XORCY:CI->O          17   0.206   1.639  Madd_a[15]_b[15]_add_0_OUT_xor<11> (a[15]_b[15]_add_0_OUT<11>)
+     end scope: 'alu/add:a[15]_b[15]_add_0_OUT<11>'
+     LUT5:I0->O            1   0.254   0.682  Mmux_alu212 (Mmux_alu211)
+     LUT6:I5->O            1   0.254   0.682  Mmux_alu213 (Mmux_alu212)
+     LUT6:I5->O            1   0.254   0.682  Mmux_alu214 (Mmux_alu213)
+     LUT4:I3->O           18   0.254   1.235  Mmux_alu217 (alu<0>)
+     end scope: 'alu:alu<0>'
+     begin scope: 'regFile:M_alu_alu<0>'
+     LUT6:I5->O            1   0.254   0.000  Mmux_M_r7_data_d17 (M_r7_data_d<0>)
+     FDRE:D                    0.074          M_r7_data_q_0
+    ----------------------------------------
+    Total                     18.941ns (4.665ns logic, 14.276ns route)
+                                       (24.6% logic, 75.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 12555908 / 626
+-------------------------------------------------------------------------
+Offset:              21.947ns (Levels of Logic = 33)
+  Source:            switch<0> (PAD)
+  Destination:       regFile/M_r1_data_q_0 (FF)
+  Destination Clock: clk rising
+
+  Data Path: switch<0> to regFile/M_r1_data_q_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             8   1.328   1.374  switch_0_IBUF (switch_0_IBUF)
+     begin scope: 'fsm_logic:push_button<0>'
+     LUT6:I1->O            1   0.254   0.682  n0176<15>1 (n0176<15>)
+     LUT6:I5->O           72   0.254   2.447  n0176<15>3 (n0176)
+     LUT6:I0->O            1   0.254   1.112  M_easy_light[15]_M_easy_value[25]_AND_5_o5_SW1 (N91)
+     LUT6:I1->O            4   0.254   0.804  Mmux_ra_addr3111 (Mmux_ra_addr311)
+     LUT6:I5->O            5   0.254   1.117  Mmux_ra_addr31 (Mmux_ra_addr3)
+     LUT6:I2->O           18   0.254   1.235  Mmux_ra_addr33_3 (Mmux_ra_addr332)
+     end scope: 'fsm_logic:Mmux_ra_addr332'
+     begin scope: 'regFile:Mmux_ra_addr332'
+     LUT6:I5->O            1   0.254   0.910  mux_9 (mux_9)
+     LUT6:I3->O            1   0.235   0.000  mux_2_f7_F (N883)
+     MUXF7:I0->O           8   0.163   0.943  mux_2_f7 (ra_data<0>1)
+     INV:I->O              1   0.255   0.681  ra_data<0>_inv1_INV_0 (ra_data<0>)
+     end scope: 'regFile:ra_data<0>'
+     begin scope: 'alu:a<0>'
+     begin scope: 'alu/add:a<0>'
+     MUXCY:DI->O           1   0.181   0.000  Madd_a[15]_b[15]_add_0_OUT_cy<0> (Madd_a[15]_b[15]_add_0_OUT_cy<0>)
+     MUXCY:CI->O           1   0.023   0.000  Madd_a[15]_b[15]_add_0_OUT_cy<1> (Madd_a[15]_b[15]_add_0_OUT_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  Madd_a[15]_b[15]_add_0_OUT_cy<2> (Madd_a[15]_b[15]_add_0_OUT_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  Madd_a[15]_b[15]_add_0_OUT_cy<3> (Madd_a[15]_b[15]_add_0_OUT_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  Madd_a[15]_b[15]_add_0_OUT_cy<4> (Madd_a[15]_b[15]_add_0_OUT_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  Madd_a[15]_b[15]_add_0_OUT_cy<5> (Madd_a[15]_b[15]_add_0_OUT_cy<5>)
+     MUXCY:CI->O           1   0.023   0.000  Madd_a[15]_b[15]_add_0_OUT_cy<6> (Madd_a[15]_b[15]_add_0_OUT_cy<6>)
+     MUXCY:CI->O           1   0.023   0.000  Madd_a[15]_b[15]_add_0_OUT_cy<7> (Madd_a[15]_b[15]_add_0_OUT_cy<7>)
+     MUXCY:CI->O           1   0.023   0.000  Madd_a[15]_b[15]_add_0_OUT_cy<8> (Madd_a[15]_b[15]_add_0_OUT_cy<8>)
+     MUXCY:CI->O           1   0.023   0.000  Madd_a[15]_b[15]_add_0_OUT_cy<9> (Madd_a[15]_b[15]_add_0_OUT_cy<9>)
+     MUXCY:CI->O           1   0.023   0.000  Madd_a[15]_b[15]_add_0_OUT_cy<10> (Madd_a[15]_b[15]_add_0_OUT_cy<10>)
+     XORCY:CI->O          17   0.206   1.639  Madd_a[15]_b[15]_add_0_OUT_xor<11> (a[15]_b[15]_add_0_OUT<11>)
+     end scope: 'alu/add:a[15]_b[15]_add_0_OUT<11>'
+     LUT5:I0->O            1   0.254   0.682  Mmux_alu212 (Mmux_alu211)
+     LUT6:I5->O            1   0.254   0.682  Mmux_alu213 (Mmux_alu212)
+     LUT6:I5->O            1   0.254   0.682  Mmux_alu214 (Mmux_alu213)
+     LUT4:I3->O           18   0.254   1.235  Mmux_alu217 (alu<0>)
+     end scope: 'alu:alu<0>'
+     begin scope: 'regFile:M_alu_alu<0>'
+     LUT6:I5->O            1   0.254   0.000  Mmux_M_r7_data_d17 (M_r7_data_d<0>)
+     FDRE:D                    0.074          M_r7_data_q_0
+    ----------------------------------------
+    Total                     21.947ns (5.722ns logic, 16.225ns route)
+                                       (26.1% logic, 73.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 11376004 / 36
+-------------------------------------------------------------------------
+Offset:              22.736ns (Levels of Logic = 35)
+  Source:            fsm_logic/med/M_count_q_4 (FF)
+  Destination:       light<0> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: fsm_logic/med/M_count_q_4 to light<0>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q            16   0.525   1.612  M_count_q_4 (M_count_q_4)
+     end scope: 'fsm_logic/med:M_count_q_4'
+     end scope: 'fsm_logic:M_count_q_4'
+     begin scope: 'fsm_logic_med:M_count_q_4'
+     begin scope: 'fsm_logic_med/randSeq:M_count_q_4'
+     LUT6:I1->O            3   0.254   1.221  Mram_sequence31 (M_randSeq_sequence<3>)
+     end scope: 'fsm_logic_med/randSeq:M_randSeq_sequence<3>'
+     end scope: 'fsm_logic_med:M_randSeq_sequence<3>'
+     begin scope: 'fsm_logic:fsm_logic/med/M_randSeq_sequence<3>'
+     LUT6:I0->O            1   0.254   0.682  M_med_light[15]_M_med_value[24]_AND_6_o5 (M_med_light[15]_M_med_value[24]_AND_6_o5)
+     LUT3:I2->O            3   0.254   0.766  M_med_light[15]_M_med_value[24]_AND_6_o6_SW0 (N62)
+     LUT6:I5->O            6   0.254   1.306  M_med_light[15]_M_med_value[24]_AND_6_o6_1 (M_med_light[15]_M_med_value[24]_AND_6_o6)
+     LUT6:I1->O           18   0.254   1.235  Mmux_ra_addr33_3 (Mmux_ra_addr332)
+     end scope: 'fsm_logic:Mmux_ra_addr332'
+     begin scope: 'regFile:Mmux_ra_addr332'
+     LUT6:I5->O            1   0.254   0.910  mux_9 (mux_9)
+     LUT6:I3->O            1   0.235   0.000  mux_2_f7_F (N883)
+     MUXF7:I0->O           8   0.163   0.943  mux_2_f7 (ra_data<0>1)
+     INV:I->O              1   0.255   0.681  ra_data<0>_inv1_INV_0 (ra_data<0>)
+     end scope: 'regFile:ra_data<0>'
+     begin scope: 'alu:a<0>'
+     begin scope: 'alu/add:a<0>'
+     MUXCY:DI->O           1   0.181   0.000  Madd_a[15]_b[15]_add_0_OUT_cy<0> (Madd_a[15]_b[15]_add_0_OUT_cy<0>)
+     MUXCY:CI->O           1   0.023   0.000  Madd_a[15]_b[15]_add_0_OUT_cy<1> (Madd_a[15]_b[15]_add_0_OUT_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  Madd_a[15]_b[15]_add_0_OUT_cy<2> (Madd_a[15]_b[15]_add_0_OUT_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  Madd_a[15]_b[15]_add_0_OUT_cy<3> (Madd_a[15]_b[15]_add_0_OUT_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  Madd_a[15]_b[15]_add_0_OUT_cy<4> (Madd_a[15]_b[15]_add_0_OUT_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  Madd_a[15]_b[15]_add_0_OUT_cy<5> (Madd_a[15]_b[15]_add_0_OUT_cy<5>)
+     MUXCY:CI->O           1   0.023   0.000  Madd_a[15]_b[15]_add_0_OUT_cy<6> (Madd_a[15]_b[15]_add_0_OUT_cy<6>)
+     MUXCY:CI->O           1   0.023   0.000  Madd_a[15]_b[15]_add_0_OUT_cy<7> (Madd_a[15]_b[15]_add_0_OUT_cy<7>)
+     MUXCY:CI->O           1   0.023   0.000  Madd_a[15]_b[15]_add_0_OUT_cy<8> (Madd_a[15]_b[15]_add_0_OUT_cy<8>)
+     MUXCY:CI->O           1   0.023   0.000  Madd_a[15]_b[15]_add_0_OUT_cy<9> (Madd_a[15]_b[15]_add_0_OUT_cy<9>)
+     MUXCY:CI->O           1   0.023   0.000  Madd_a[15]_b[15]_add_0_OUT_cy<10> (Madd_a[15]_b[15]_add_0_OUT_cy<10>)
+     XORCY:CI->O          17   0.206   1.639  Madd_a[15]_b[15]_add_0_OUT_xor<11> (a[15]_b[15]_add_0_OUT<11>)
+     end scope: 'alu/add:a[15]_b[15]_add_0_OUT<11>'
+     LUT5:I0->O            1   0.254   0.682  Mmux_alu212 (Mmux_alu211)
+     LUT6:I5->O            1   0.254   0.682  Mmux_alu213 (Mmux_alu212)
+     LUT6:I5->O            1   0.254   0.682  Mmux_alu214 (Mmux_alu213)
+     LUT4:I3->O           18   0.254   1.511  Mmux_alu217 (alu<0>)
+     end scope: 'alu:alu<0>'
+     begin scope: 'fsm_logic:alu<0>'
+     LUT6:I2->O            1   0.254   0.681  Mmux_light49 (light<0>)
+     end scope: 'fsm_logic:light<0>'
+     OBUF:I->O                 2.912          light_0_OBUF (light<0>)
+    ----------------------------------------
+    Total                     22.736ns (7.503ns logic, 15.233ns route)
+                                       (33.0% logic, 67.0% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 711760 / 16
+-------------------------------------------------------------------------
+Delay:               25.742ns (Levels of Logic = 34)
+  Source:            switch<0> (PAD)
+  Destination:       light<0> (PAD)
+
+  Data Path: switch<0> to light<0>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             8   1.328   1.374  switch_0_IBUF (switch_0_IBUF)
+     begin scope: 'fsm_logic:push_button<0>'
+     LUT6:I1->O            1   0.254   0.682  n0176<15>1 (n0176<15>)
+     LUT6:I5->O           72   0.254   2.447  n0176<15>3 (n0176)
+     LUT6:I0->O            1   0.254   1.112  M_easy_light[15]_M_easy_value[25]_AND_5_o5_SW1 (N91)
+     LUT6:I1->O            4   0.254   0.804  Mmux_ra_addr3111 (Mmux_ra_addr311)
+     LUT6:I5->O            5   0.254   1.117  Mmux_ra_addr31 (Mmux_ra_addr3)
+     LUT6:I2->O           18   0.254   1.235  Mmux_ra_addr33_3 (Mmux_ra_addr332)
+     end scope: 'fsm_logic:Mmux_ra_addr332'
+     begin scope: 'regFile:Mmux_ra_addr332'
+     LUT6:I5->O            1   0.254   0.910  mux_9 (mux_9)
+     LUT6:I3->O            1   0.235   0.000  mux_2_f7_F (N883)
+     MUXF7:I0->O           8   0.163   0.943  mux_2_f7 (ra_data<0>1)
+     INV:I->O              1   0.255   0.681  ra_data<0>_inv1_INV_0 (ra_data<0>)
+     end scope: 'regFile:ra_data<0>'
+     begin scope: 'alu:a<0>'
+     begin scope: 'alu/add:a<0>'
+     MUXCY:DI->O           1   0.181   0.000  Madd_a[15]_b[15]_add_0_OUT_cy<0> (Madd_a[15]_b[15]_add_0_OUT_cy<0>)
+     MUXCY:CI->O           1   0.023   0.000  Madd_a[15]_b[15]_add_0_OUT_cy<1> (Madd_a[15]_b[15]_add_0_OUT_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  Madd_a[15]_b[15]_add_0_OUT_cy<2> (Madd_a[15]_b[15]_add_0_OUT_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  Madd_a[15]_b[15]_add_0_OUT_cy<3> (Madd_a[15]_b[15]_add_0_OUT_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  Madd_a[15]_b[15]_add_0_OUT_cy<4> (Madd_a[15]_b[15]_add_0_OUT_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  Madd_a[15]_b[15]_add_0_OUT_cy<5> (Madd_a[15]_b[15]_add_0_OUT_cy<5>)
+     MUXCY:CI->O           1   0.023   0.000  Madd_a[15]_b[15]_add_0_OUT_cy<6> (Madd_a[15]_b[15]_add_0_OUT_cy<6>)
+     MUXCY:CI->O           1   0.023   0.000  Madd_a[15]_b[15]_add_0_OUT_cy<7> (Madd_a[15]_b[15]_add_0_OUT_cy<7>)
+     MUXCY:CI->O           1   0.023   0.000  Madd_a[15]_b[15]_add_0_OUT_cy<8> (Madd_a[15]_b[15]_add_0_OUT_cy<8>)
+     MUXCY:CI->O           1   0.023   0.000  Madd_a[15]_b[15]_add_0_OUT_cy<9> (Madd_a[15]_b[15]_add_0_OUT_cy<9>)
+     MUXCY:CI->O           1   0.023   0.000  Madd_a[15]_b[15]_add_0_OUT_cy<10> (Madd_a[15]_b[15]_add_0_OUT_cy<10>)
+     XORCY:CI->O          17   0.206   1.639  Madd_a[15]_b[15]_add_0_OUT_xor<11> (a[15]_b[15]_add_0_OUT<11>)
+     end scope: 'alu/add:a[15]_b[15]_add_0_OUT<11>'
+     LUT5:I0->O            1   0.254   0.682  Mmux_alu212 (Mmux_alu211)
+     LUT6:I5->O            1   0.254   0.682  Mmux_alu213 (Mmux_alu212)
+     LUT6:I5->O            1   0.254   0.682  Mmux_alu214 (Mmux_alu213)
+     LUT4:I3->O           18   0.254   1.511  Mmux_alu217 (alu<0>)
+     end scope: 'alu:alu<0>'
+     begin scope: 'fsm_logic:alu<0>'
+     LUT6:I2->O            1   0.254   0.681  Mmux_light49 (light<0>)
+     end scope: 'fsm_logic:light<0>'
+     OBUF:I->O                 2.912          light_0_OBUF (light<0>)
+    ----------------------------------------
+    Total                     25.742ns (8.560ns logic, 17.182ns route)
+                                       (33.3% logic, 66.7% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |   18.941|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 24.00 secs
+Total CPU time to Xst completion: 23.86 secs
+ 
+--> 
+
+Total memory usage is 4539012 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  128 (   0 filtered)
+Number of infos    :   41 (   0 filtered)
+

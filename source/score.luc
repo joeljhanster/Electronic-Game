@@ -1,0 +1,60 @@
+// SCORE MODULE: This file adds the score using ADDER through ALU after each successful input press.
+// Subsequently, hiscore and score are updated and stored into their respective registers.
+
+module score (
+    input clk,           // clock
+    input rst,
+    input alu[16],       // 16-bit alu to overwrite FSM Logic alu input
+    output alufn[6],     // 6-bit alufn signal to overwrite FSM Logic alufn signal
+    output ra_addr[5],   // 5-bit register A address to overwrite FSM Logic register A address
+    output rb_addr[5],   // 5-bit register B address to overwrite FSM Logic register B address
+    output wa_data[16],  // 16-bit data to be written into register A
+    output write,        // write signal: write = 1, read = 0
+    output next          // signal to show that scores have been updated
+  ) {
+  .clk(clk), .rst(rst) {
+    dff countScore[2];   // counter to run each instruction sequentially
+    dff score[16];       // stores the updated 16-bit score
+    dff hiscore[16];     // stores the updated 16-bit hiscore
+  }
+
+  always {
+    // DEFAULT OUTPUT VALUES
+    write = 0;
+    alufn = 6b000000;
+    ra_addr = 5b11111;
+    rb_addr = 5b11111;
+    wa_data = 16b0;
+    next = 0;
+    
+    // STEP 3: STORE SCORE INTO REGISTER 16
+    if (countScore.q == 2) {
+      write = 1;
+      ra_addr = 5b10000;      // register 16 (score)
+      wa_data = score.q;      
+      countScore.d = 0;       // jump back to step 1
+      next = 1;               // scores have been updated
+    }
+      
+    // STEP 2: COMPARE SCORE WITH HISCORE & STORE HISCORE INTO REGISTER 15
+    else if (countScore.q == 1) {
+      score.d = alu;
+      if (score.q > hiscore.q) {
+        hiscore.d = score.q;  // update hiscore
+        write = 1;
+        ra_addr = 5b01111;    // register 15 (hiscore)
+        wa_data = score.q;
+      }
+      countScore.d = 2;       // jump to step 3
+    }
+      
+    // STEP 1: ADD SCORE (REGISTER 16) WITH POINTS TO ADD (REGISTER 19)
+    else {
+      write = 0;          // read
+      alufn = 6b000000;   // add function
+      ra_addr = 5b10000;  // register 16 (score)
+      rb_addr = 5b10011;  // register 19 (numPoints)
+      countScore.d = 1;   // jump to step 2
+    }
+  }
+}

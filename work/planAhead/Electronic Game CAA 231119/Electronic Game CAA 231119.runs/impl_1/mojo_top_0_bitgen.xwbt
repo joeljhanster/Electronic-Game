@@ -1,0 +1,8 @@
+INTSTYLE=pa
+INFILE=C:\Users\jieha\OneDrive\Documents\mojo\Electronic Game CAA 231119\work\planAhead\Electronic Game CAA 231119\Electronic Game CAA 231119.runs\impl_1\mojo_top_0_routed.ncd
+OUTFILE=C:\Users\jieha\OneDrive\Documents\mojo\Electronic Game CAA 231119\work\planAhead\Electronic Game CAA 231119\Electronic Game CAA 231119.runs\impl_1\mojo_top_0.bit
+FAMILY=Spartan6
+PART=xc6slx9-2tqg144
+WORKINGDIR=C:\Users\jieha\OneDrive\Documents\mojo\Electronic Game CAA 231119\work\planAhead\Electronic Game CAA 231119\Electronic Game CAA 231119.runs\impl_1
+LICENSE=WebPack
+USER_INFO=211836347_0_0_152
