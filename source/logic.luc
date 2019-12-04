@@ -29,7 +29,7 @@ module logic (
       dff stage[4];          // 16 stages in total, thus 4-bits
       dff length[4];         // sequence length (max 13, thus 4-bits)
       dff count[4];          // counter to select ra_addr when writing into regFile during light up sequence (stores data into registers backwards)
-      dff release[23];       // average time taken for each button pressed before releasing is 7000000 clock cycles, thus 23-bits
+      dff release[100];      // average time taken for each button pressed before releasing is 7000000-10000000 clock cycles, number of cycles doesn't exceed 100 bits (arbitrarily large)
       dff press_input[16];   // stores press input sequence as data for register 14
       dff cmpeq;             // stores alu output after CMPEQ when checking press input sequence and light up sequence
       dff multiplier[16];    // stores multiplier values for each stage as data for register 18
@@ -325,10 +325,6 @@ module logic (
         }
         else if (push_button == 16b0 && release.q > 7000000) {
           if (cmpeq.q) {  // INPUT IS CORRECT
-            cmpeq.d = 0;
-            release.d = 0;
-            state.d = state.S11;
-          /*
             alufn = scoreModule.alufn;
             ra_addr = scoreModule.ra_addr;
             rb_addr = scoreModule.rb_addr;
@@ -338,7 +334,7 @@ module logic (
               cmpeq.d = 0;
               release.d = 0;
               state.d = state.S11;
-            }*/
+            }
           }
           else if (!cmpeq.q) {
             cmpeq.d = 0;
@@ -367,10 +363,6 @@ module logic (
         }
         else if (push_button == 16b0 && release.q > 7000000) {
           if (cmpeq.q) {  // INPUT IS CORRECT
-            cmpeq.d = 0;
-            release.d = 0;
-            state.d = state.S10;
-          /*
             alufn = scoreModule.alufn;
             ra_addr = scoreModule.ra_addr;
             rb_addr = scoreModule.rb_addr;
@@ -380,7 +372,7 @@ module logic (
               cmpeq.d = 0;
               release.d = 0;
               state.d = state.S10;
-            }*/
+            }
           }
           else if (!cmpeq.q) {
             cmpeq.d = 0;
@@ -409,10 +401,6 @@ module logic (
         }
         else if (push_button == 16b0 && release.q > 7000000) {
           if (cmpeq.q) {  // INPUT IS CORRECT
-            cmpeq.d = 0;
-            release.d = 0;
-            state.d = state.S9;
-          /*
             alufn = scoreModule.alufn;
             ra_addr = scoreModule.ra_addr;
             rb_addr = scoreModule.rb_addr;
@@ -422,7 +410,7 @@ module logic (
               cmpeq.d = 0;
               release.d = 0;
               state.d = state.S9;
-            }*/
+            }
           }
           else if (!cmpeq.q) {
             cmpeq.d = 0;
@@ -451,10 +439,6 @@ module logic (
         }
         else if (push_button == 16b0 && release.q > 7000000) {
           if (cmpeq.q) {  // INPUT IS CORRECT
-            cmpeq.d = 0;
-            release.d = 0;
-            state.d = state.S8;
-          /*
             alufn = scoreModule.alufn;
             ra_addr = scoreModule.ra_addr;
             rb_addr = scoreModule.rb_addr;
@@ -464,7 +448,7 @@ module logic (
               cmpeq.d = 0;
               release.d = 0;
               state.d = state.S8;
-            }*/
+            }
           }
           else if (!cmpeq.q) {
             cmpeq.d = 0;
@@ -493,10 +477,6 @@ module logic (
         }
         else if (push_button == 16b0 && release.q > 7000000) {
           if (cmpeq.q) {  // INPUT IS CORRECT
-            cmpeq.d = 0;
-            release.d = 0;
-            state.d = state.S7;
-          /*
             alufn = scoreModule.alufn;
             ra_addr = scoreModule.ra_addr;
             rb_addr = scoreModule.rb_addr;
@@ -506,7 +486,7 @@ module logic (
               cmpeq.d = 0;
               release.d = 0;
               state.d = state.S7;
-            }*/
+            }
           }
           else if (!cmpeq.q) {
             cmpeq.d = 0;
@@ -535,10 +515,6 @@ module logic (
         }
         else if (push_button == 16b0 && release.q > 7000000) {
           if (cmpeq.q) {  // INPUT IS CORRECT
-            cmpeq.d = 0;
-            release.d = 0;
-            state.d = state.S6;
-          /*
             alufn = scoreModule.alufn;
             ra_addr = scoreModule.ra_addr;
             rb_addr = scoreModule.rb_addr;
@@ -548,7 +524,7 @@ module logic (
               cmpeq.d = 0;
               release.d = 0;
               state.d = state.S6;
-            }*/
+            }
           }
           else if (!cmpeq.q) {
             cmpeq.d = 0;
@@ -577,10 +553,6 @@ module logic (
         }
         else if (push_button == 16b0 && release.q > 7000000) {
           if (cmpeq.q) {  // INPUT IS CORRECT
-            cmpeq.d = 0;
-            release.d = 0;
-            state.d = state.S5;
-          /*
             alufn = scoreModule.alufn;
             ra_addr = scoreModule.ra_addr;
             rb_addr = scoreModule.rb_addr;
@@ -590,7 +562,7 @@ module logic (
               cmpeq.d = 0;
               release.d = 0;
               state.d = state.S5;
-            }*/
+            }
           }
           else if (!cmpeq.q) {
             state.d = state.FAIL;
@@ -618,11 +590,6 @@ module logic (
         }
         else if (push_button == 16b0 && release.q > 7000000) {
           if (cmpeq.q) {  // INPUT IS CORRECT
-            cmpeq.d = 0;
-            release.d = 0;
-            state.d = state.S4;
-          
-            /*
             alufn = scoreModule.alufn;
             ra_addr = scoreModule.ra_addr;
             rb_addr = scoreModule.rb_addr;
@@ -632,7 +599,7 @@ module logic (
               cmpeq.d = 0;
               release.d = 0;
               state.d = state.S4;
-            }*/
+            }
           }
           else if (!cmpeq.q) {
             state.d = state.FAIL;
@@ -660,10 +627,6 @@ module logic (
         }
         else if (push_button == 16b0 && release.q > 7000000) {
           if (cmpeq.q) {  // INPUT IS CORRECT
-            cmpeq.d = 0;
-            release.d = 0;
-            state.d = state.S3;
-          /*
             alufn = scoreModule.alufn;
             ra_addr = scoreModule.ra_addr;
             rb_addr = scoreModule.rb_addr;
@@ -673,7 +636,7 @@ module logic (
               cmpeq.d = 0;
               release.d = 0;
               state.d = state.S3;
-            }*/
+            }
           }
           else if (!cmpeq.q) {
             state.d = state.FAIL;
@@ -701,10 +664,6 @@ module logic (
         }
         else if (push_button == 16b0 && release.q > 7000000) {
           if (cmpeq.q) {  // INPUT IS CORRECT
-            cmpeq.d = 0;
-            release.d = 0;
-            state.d = state.S2;
-          /*
             alufn = scoreModule.alufn;
             ra_addr = scoreModule.ra_addr;
             rb_addr = scoreModule.rb_addr;
@@ -714,7 +673,7 @@ module logic (
               cmpeq.d = 0;
               release.d = 0;
               state.d = state.S2;
-            }*/
+            }
           }
           else if (!cmpeq.q) {
             state.d = state.FAIL;
@@ -742,10 +701,6 @@ module logic (
         }
         else if (push_button == 16b0 && release.q > 7000000) {
           if (cmpeq.q) {  // INPUT IS CORRECT
-            cmpeq.d = 0;
-            release.d = 0;
-            state.d = state.S1;
-          /*
             alufn = scoreModule.alufn;
             ra_addr = scoreModule.ra_addr;
             rb_addr = scoreModule.rb_addr;
@@ -755,7 +710,7 @@ module logic (
               cmpeq.d = 0;
               release.d = 0;
               state.d = state.S1;
-            }*/
+            }
           }
           else if (!cmpeq.q) {
             state.d = state.FAIL;
@@ -783,10 +738,6 @@ module logic (
         }
         else if (push_button == 16b0 && release.q > 7000000) {
           if (cmpeq.q) {  // INPUT IS CORRECT
-            cmpeq.d = 0;
-            release.d = 0;
-            state.d = state.S0;
-          /*
             alufn = scoreModule.alufn;
             ra_addr = scoreModule.ra_addr;
             rb_addr = scoreModule.rb_addr;
@@ -796,7 +747,7 @@ module logic (
               cmpeq.d = 0;
               release.d = 0;
               state.d = state.S0;
-            }*/
+            }
           }
           else if (!cmpeq.q) {
             state.d = state.FAIL;
@@ -827,19 +778,6 @@ module logic (
             state.d = state.FAIL;
           }
           else if (cmpeq.q) {  // INPUT IS CORRECT
-            if (stage.q == 15) {
-              cmpeq.d = 0;
-              release.d = 0;
-              state.d = state.SUCCESS;
-            }
-            else {
-              cmpeq.d = 0;
-              release.d = 0;
-              delay.resetCount = 1;
-              stage.d = stage.q + 1;
-              state.d = state.MULTIPLIER;
-            }
-          /*
             alufn = scoreModule.alufn;
             ra_addr = scoreModule.ra_addr;
             rb_addr = scoreModule.rb_addr;
@@ -857,7 +795,6 @@ module logic (
               stage.d = stage.q + 1;
               state.d = state.MULTIPLIER;
             }
-            */
           }
         }
         
